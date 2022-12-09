@@ -134,9 +134,27 @@ body { padding-top: 50px; }
     -ms-filter: grayscale(0);
     -o-filter: grayscale(0);
 }
+
 /******************************************
 * Langues
 ******************************************/
 #langues .container { display: flex; flex-direction: row; justify-content: space-between; }
 #langues .langue, #langues .niveau{ font-size: 1.3em; }
 #langues .langue { padding-top: 3px; }
+
+/******************************************
+* Compétences
+******************************************/
+#competences .container {
+ display: flex; flex-direction: row; justify-content: space-between; }
+#competences .container .libelle { font-size: 1.3em; }
+#competences .container .classement {
+ background: scroll transparent url(images/Red-Rating-Stars.png) no-repeat;
+ width: 160px; height: 27px; }
+#competences .container .classement0 { background-position: 0 -142px; }
+#competences .container .classement1 { background-position: 0 -112px; }
+#competences .container .classement2 { background-position: 0 -84px; }
+#competences .container .classement3 { background-position: 0 -56px; }
+#competences .container .classement4 { background-position: 0 -28px; }
+#competences .container .classement5 { background-position: 0 0px; }
+
