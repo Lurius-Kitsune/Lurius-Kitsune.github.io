@@ -49,7 +49,7 @@ body { padding-top: 50px; }
 * Rubriques
 ****************************************/
 .rubrique { margin-bottom: 15px; }
-.rubrique h2 { color: rgb(226,0,26); }
+.rubrique h2 { color: #007bff; }
 .rubrique h2::before{ margin-right: 5px; }
 .rubrique p{ font-size: 1.3em; line-height: 1.5em; }
 
@@ -94,7 +94,7 @@ body { padding-top: 50px; }
 .experience .lieu { font-size: 1.1em; font-weight: bold; }
 .experience .date { font-size: 1em; opacity: 0.7; }
 .experience .profession { font-size: 1.45em; font-weight: bold; margin-top: -6px; }
-.experience .details { font-size: 1.2em; line-height: 1.5em; }
+.experience .details { font-size: 1em; line-height: 1.5em; }
 
 /****************************************** * Me contacter ******************************************/
 .meContacter {
