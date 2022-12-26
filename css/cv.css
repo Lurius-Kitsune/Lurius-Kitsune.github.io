@@ -3,6 +3,8 @@ body { padding-top: 50px; }
 .cadreCV { 
     padding-bottom: 15px; 
     background: white; 
+    border-radius: 60px;
+    border: 10px ridge rgba(50, 61, 220, 0.6);
 }
 
 /****************************************
@@ -59,7 +61,7 @@ body { padding-top: 50px; }
 #parcours { margin-top: 20px; position: relative; padding: 1em 0; list-style: none; }
 #parcours::before { width: 5px; height: 100%; position: absolute; left: 7.8px; top: 0;
  display: block; background: linear-gradient(to bottom, #ffffff 0%, 
- #E2001A 7%, #E2001A, #ffffff 100%); content:""; }
+ #0127ff 7%, #0127ff 75%, #ffffff 100%); content:""; }
 #parcours li { width: 100%; z-index: 2; position: relative; float: left; }
 #parcours .date .glyphicon-record::before { background: #FFFFFF; color: #555; }
 #parcours .date { width: 75px; background-color: rgba(0, 0, 0, 0); font-size: 1.5em;
