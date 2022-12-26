@@ -8,5 +8,6 @@
     max-width: 1000px; 
     background: white; 
     border-radius: 60px; 
+    border: 10px ridge rgba(50, 61, 220, 0.6);
     padding: 15px;
 }
