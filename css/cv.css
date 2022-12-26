@@ -75,18 +75,23 @@ body { padding-top: 50px; }
  pointer-events: none; }
 #parcours .details h3{ font-size: 1.5em; margin: 0; padding: 0; font-weight: 700; }
 #parcours .details p{ font-size: 1.3em; margin-top: 5px; padding: 0; }
+
 /* Pour empêcher la déformation du parcours scolaire selon la STA */
-@media (min-width: 500px) { #parcours .date { width: 20%; }
- #parcours .details { width: 80%; }
+@media (min-width: 500px) { 
+    #parcours .date { width: 21%; }
+    #parcours .details { width: 80%; }
 }
-@media (min-width: 768px) { #parcours .date { width: 25%; }
- #parcours .details { width: 75%; }
+@media (min-width: 768px) { 
+    #parcours .date { width: 26%; }
+    #parcours .details { width: 75%; }
 }
-@media (min-width: 992px) { #parcours .date { width: 17%; }
- #parcours .details { width: 83%; }
+@media (min-width: 992px) { 
+    #parcours .date { width: 18%; }
+    #parcours .details { width: 83%; }
 }
-@media (min-width: 1200px) { #parcours .date { width: 13%; }
- #parcours .details { width: 87%; }
+@media (min-width: 1200px) { 
+    #parcours .date { width: 14%; }
+    #parcours .details { width: 87%; }
 }
 
 /******************************************
