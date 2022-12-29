@@ -6,8 +6,21 @@
 .box-lg{
     margin: 0px auto; 
     max-width: 1000px; 
-    background: white; 
-    border-radius: 60px; 
-    border: 10px ridge rgba(50, 61, 220, 0.6);
+    background: white;  
     padding: 15px;
+}
+/*Utilisation de bordure*/
+/*Taille de la bordure*/
+.border-sm{
+    border-width: 10px !important
+}
+
+/*couleur*/
+.border-blue{
+    border-style: ridge !important;
+    border-color:rgba(50, 61, 220, 0.6) !important;
+}
+.border-red{
+    border-style: ridge !important;
+    border-color:rgba(220, 50, 50, 0.6) !important;
 }
