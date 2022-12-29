@@ -64,9 +64,9 @@ body { padding-top: 50px; }
  #0127ff 7%, #0127ff 75%, #ffffff 100%); content:""; }
 #parcours li { width: 100%; z-index: 2; position: relative; float: left; }
 #parcours .date .glyphicon-record::before { background: #FFFFFF; color: #555; }
-#parcours .date { width: 75px; background-color: rgba(0, 0, 0, 0); font-size: 1.5em;
+#parcours .date { width: 85px; background-color: rgba(0, 0, 0, 0); font-size: 1.5em;
  font-weight: 700; display: inline-block; }
-#parcours .details { width: 325px; display: inline-block; background: #eee;
+#parcours .details { width: 77%; display: inline-block; background: #eee;
  position: relative; padding: 10px 10px 0 10px;
  border-bottom: 1px solid #ddd; margin: -4px -12px 20px 0; }
 #parcours .details::after { content: ''; position: absolute; top: 15px; right: 0;
@@ -77,9 +77,13 @@ body { padding-top: 50px; }
 #parcours .details p{ font-size: 1.3em; margin-top: 5px; padding: 0; }
 
 /* Pour empêcher la déformation du parcours scolaire selon la STA */
-@media (min-width: 500px) { 
-    #parcours .date { width: 21%; }
-    #parcours .details { width: 80%; }
+@media (max-width: 418px) {
+    #parcours .details { width: 66%; }
+}
+
+@media (min-width: 576px) { 
+    #parcours .date { width: 31%; }
+    #parcours .details { width: 70%; }
 }
 @media (min-width: 768px) { 
     #parcours .date { width: 26%; }
@@ -149,6 +153,22 @@ body { padding-top: 50px; }
 #langues .langue, #langues .niveau{ font-size: 1.3em; }
 #langues .langue { padding-top: 3px; }
 
+/* Adapatation sur mobile */
+@media (max-width: 992px) {
+    #langues .langue, #langues .niveau{ font-size: 1.1em; }
+}
+
+@media (min-width: 576px) { 
+    #langues .niveau {padding-left: 15px;}
+}
+@media (min-width: 768px) { 
+    #langues .niveau{ font-size: 0.9em; }
+}
+
+@media (min-width: 992px) { 
+    #langues .langue, #langues .niveau{ font-size: 1.3em; }
+}
+
 /******************************************
 * Compétences
 ******************************************/
@@ -164,4 +184,14 @@ body { padding-top: 50px; }
 #competences .container .classement3 { background-position: 0 -56px; }
 #competences .container .classement4 { background-position: 0 -28px; }
 #competences .container .classement5 { background-position: 0 0px; }
+
+/*Adaptation sur mobile*/
+
+@media (min-width: 576px) { 
+    #competences .container{flex-direction: column;}
+}
+
+@media (min-width: 992px) { 
+    #competences .container {flex-direction: row;}
+}
 
