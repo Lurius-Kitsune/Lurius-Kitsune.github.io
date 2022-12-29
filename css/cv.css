@@ -187,3 +187,13 @@ body { padding-top: 50px; }
 #competences .container .classement4 { background-position: 0 -28px; }
 #competences .container .classement5 { background-position: 0 0px; }
 
+/*Adaptation sur mobile*/
+
+@media (min-width: 576px) { 
+    #competences .container{flex-direction: column;}
+}
+
+@media (min-width: 992px) { 
+    #competences .container {flex-direction: row;}
+}
+
