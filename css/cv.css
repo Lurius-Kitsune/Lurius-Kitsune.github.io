@@ -153,6 +153,24 @@ body { padding-top: 50px; }
 #langues .langue, #langues .niveau{ font-size: 1.3em; }
 #langues .langue { padding-top: 3px; }
 
+/* Adapatation sur mobile */
+@media (max-width: 404px) {
+    #langues .langue, #langues .niveau{ font-size: 1.1em; }
+}
+
+@media (min-width: 576px) { 
+    #langues .langue, #langues .niveau{ font-size: 1.1em; }
+    #langues .niveau {padding-left: 15px;}
+}
+@media (min-width: 768px) { 
+    #langues .niveau{ font-size: 0.9em; }
+    #langues .langue{ font-size: 1.1em; }
+}
+
+@media (min-width: 992px) { 
+    #langues .langue, #langues .niveau{ font-size: 1.3em; }
+}
+
 /******************************************
 * Compétences
 ******************************************/
