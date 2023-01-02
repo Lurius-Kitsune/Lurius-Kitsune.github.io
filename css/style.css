@@ -1,5 +1,5 @@
-.img-1{
-    background-image: url(images/background.jpg); 
+.img-1 {
+    background-image: url(images/background.jpg);
     background-attachment: scroll;
 }
 
@@ -24,16 +24,24 @@
 
 /*Utilisation de bordure*/
 /*Taille de la bordure*/
-.border-sm{
+.border-sm {
     border-width: 10px !important
 }
 
 /*couleur*/
-.border-blue{
+.border-blue {
     border-style: ridge !important;
-    border-color:rgba(50, 61, 220, 0.6) !important;
+    border-color: rgba(50, 61, 220, 0.6) !important;
 }
-.border-red{
+
+.border-red {
     border-style: ridge !important;
-    border-color:rgba(220, 50, 50, 0.6) !important;
+    border-color: rgba(220, 50, 50, 0.6) !important;
+}
+
+
+@media (max-width: 578px) {
+    .jumbotron {
+        margin-top: 2.5rem;
+    }
 }
