@@ -6,7 +6,12 @@
 .box-lg{
     margin: 0px auto; 
     max-width: 1100px; 
-    background: white;  
+    padding: 15px;
+}
+
+.box-all{
+    margin: 0px auto; 
+    width: 100%; 
     padding: 15px;
 }
 
