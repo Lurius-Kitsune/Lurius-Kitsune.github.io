@@ -5,9 +5,7 @@
                     <p>J'ai choisi de suivre le BTS SIO au lycée Bonaparte dû aux échos d'une formation en «béton»,
                         car je souhaitais pouvoir suivre cette formation dans un lieu où je pourrais être sur de la
                         qualité.
-                        Dans ce lycée, la formation ce veux d'être professionnalisante et ce veux donc d'être sélective
-                        et
-                        avec un taux de réussite élevé.
+                        Dans ce lycée, la formation se veux d'être professionnalisante avec un taux de réussite élevé.
                     </p>
                     <p><a class="btn btn-secondary" href="https://bts-sio.lyc-bonaparte.fr" target="_blank"
                             role="button">En savoir
@@ -24,7 +22,7 @@
                         j'adore !), culture
                         générale et Maths, sans oublier les cours de cybersécurité présent afin de nous formet au danger
                         et au risque de l'informatique
-                        . Ce tout me permet encore plus déterminer à faire cette formation afin d'atteindre mon but !
+                        . Ce tout ma déterminer à faire cette formation afin d'atteindre mon but !
                     </p>
                     <p><a class="btn btn-secondary" href="https://fr.wikipedia.org/wiki/Brevet_de_tec
                                   hnicien_supérieur_-_Services_informatiques_aux_organisations" target="_blank"
@@ -33,12 +31,12 @@
                 </div>
                 <div class="col-lg-4">
                     <h2>Aprés ce BTS SIO ? </h2>
-                    <p>Tout d'abord je me suis axé dans l'option SLAM : "Solutions logicielles et Applications Métiers",
-                        étant donné que je souhaite m'approcher du métier de développeur en maitrisant les bases du
+                    <p>Tout d'abord, je me suis axé dans l'option SLAM : "Solutions logicielles et Applications Métiers",
+                        étant donné que je souhaite m'approcher du métier de développeur en maîtrisant les bases du
                         développement
-                        tel que la gestion de versions ou l'orienté objet, ainsi que des languages de programmation tels
+                        tel que la gestion de versions ou l'orienté objet, ainsi que des langages de programmation tels
                         que Java,
-                        C#, C++ et autres... Par la suite, j'aimerais rejoindre l'école Objectif 3D (vois Bouton en
+                        C#, C++ et autres... Par la suite, j'aimerais rejoindre l'école Objectif 3D (voir Bouton en
                         savoir plus)
                         situé à MONTPELLIER dans le but de poursuivre mes études dedans.
                     </p>

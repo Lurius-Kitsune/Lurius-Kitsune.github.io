@@ -27,8 +27,8 @@
                         <h2 class="underline"><span class="fa fa-comment "></span> En quelques mots...</h2>
                         <p>
                             Ayant actuellement 19 ans, je souhaite faire de ma passion pour le développement
-                            mon métier, ces pour cela que je fait actuellement un BTS Services Informatiques aux Organisations
-                            afin de progresser dans le domaines et y acquérir les compétences requise&nbsp;!
+                            mon métier, c'est pour cela que je fais actuellement un BTS Services Informatiques aux Organisations
+                            afin de progresser dans le domaine et d'y acquérir les compétences requises&nbsp;!
                         </p>
                     </div>
                     <div class="rubrique clearfix">
