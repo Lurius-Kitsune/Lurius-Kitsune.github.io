@@ -3,27 +3,28 @@
     $activePage = $_SERVER['REQUEST_URI'];
 ?>
 <nav class="navbar navbar-dark bg-primary fixed-top navbar-expand-md">
-    
-        <div class="container">
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar"
+        
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
                 aria-controls="navbar">
                 <span class="sr-only">Navigation raccourcie</span>☰
             </button>
             <a class="navbar-brand" href="#">Mon portfolio</a>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="<?= $activePage === '/' ? 'active' : ''; ?> nav-item">
-                        <a href="/" class="nav-link">
+                    <li class="nav-item">
+                        <a href="/" class="<?= $activePage === '/' ? 'active' : ''; ?> nav-link">
                             <span class="fa fa-home"></span> Accueil
                         </a>
                     </li>
-                    <li class="<?= $activePage === '/pages/cv.php' ? 'active' : ''; ?> nav-item">
-                        <a href="/pages/cv.php" class="nav-link">
+                    <li class="nav-item">
+                        <a href="/pages/cv.php" class="<?= $activePage === '/pages/cv.php' ? 'active' : ''; ?> nav-link">
                             <span class="fa fa-id-badge"></span> C.V
                         </a>
                     </li>
                     <li class="dropdown nav-item">
-                        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                        <a href="#" class="<?= $activePage === '/pages/realisation/Nolark.php' ? 'active' : ''; ?> 
+                                dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                             <span class="fa fa-list-alt"></span> Réalisations <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu .dropdown-menu-end" role="menu">
