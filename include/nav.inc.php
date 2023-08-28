@@ -18,7 +18,7 @@
                     </li>
                     <li class="<?= $activePage === '/pages/cv.php' ? 'active' : ''; ?> nav-item">
                         <a href="/pages/cv.php" class="nav-link">
-                            <span class="fa fa-id-badge"></span> CV
+                            <span class="fa fa-id-badge"></span> C.V
                         </a>
                     </li>
                     <li class="dropdown nav-item">
@@ -38,7 +38,7 @@
                                 <a role="menuitem" href="#">Configuration de modèle 3D</a>
                             </li>
                             <li role="presentation" class="dropdown-header dropdown-item">
-                                Pendant mes étude</li>
+                                Pendant mes études</li>
                             <li role="presentation" class="dropdown-item">
                                 <a role="menuitem" href="/pages/realisation/Nolark.php">Nolark</a>
                             </li>
