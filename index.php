@@ -37,31 +37,6 @@
                 </p>
                 <a href="/pages/cv.php"><button class="btn btn-primary" style="width: 135px" >En savoir plus »</button></a>
             </div>
-            <div>
-                <h4 class="underline">Contenue du portfolio :</h4>
-                <p> A travers ceux portfolio vous allez pouvoir naviguer à travers plusieur pages qui vous donneront
-                    les information suivant :
-                </p>
-                <ul>
-                    <li>Une présentation du lycée où j'ai passée mon BTS SIO</li>
-                    <li>Mon Curriculum Vitae.</li>
-                    <li>Mes réalisation en Automie, en Entreprise et pendant mes études.</li>
-                    <li>Une catégorie en lien avec l'épreuve E5. (sont remplisage se fera au cours de la 2nd année de
-                        BTS SIO)</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="underline">Le but de ceux portfolio :</h4>
-                <p>
-                    Ce portfolio me permet de montrer mes compétences ainsi que mes capacité afin de pouvoir me
-                    démarquer lors d'un recrutement. Il répertorira
-                    mon profil ainsi que toute documentation, expériences professionel et stages accumulé au fil du
-                    temps.
-                </p>
-                <p>
-                    Ce portfolio fait aussi partie de l'épreuve E5 du BTS SIO et sera donc jugé et noté par un jury.
-                </p>
-            </div>
         </div>
     </div> <!-- Emplacement pour le contenu principal de la page -->
     <footer>
