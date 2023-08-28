@@ -7,8 +7,8 @@
 
 <body>
     <?php require_once __DIR__ . '/../../include/nav.inc.php'; ?>
-    <div class="jumbotron img-1">
-        <div class="box-lg rounded bg-white">
+    <div class="p-5 mb-4 bg-body-tertiary rounded-34 img-1">
+        <div class="mt-5 box-lg rounded bg-white">
             <h3 class="text-center underline">
                 Le site Nolark :
             </h3>

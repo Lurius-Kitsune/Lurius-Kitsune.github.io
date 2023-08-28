@@ -9,7 +9,7 @@
 <body>
     <?php require_once __DIR__ . '/../include/nav.inc.php'; ?>
 
-    <div class="jumbotron img-1">
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 img-1">
         <div class="container">
             <div class="row cadreCV">
                 <div id="cv-entete" class="text-center">

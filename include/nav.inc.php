@@ -3,6 +3,7 @@
     $activePage = $_SERVER['REQUEST_URI'];
 ?>
 <nav class="navbar navbar-dark bg-primary fixed-top navbar-expand-md">
+    
         <div class="container">
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar"
                 aria-controls="navbar">
@@ -22,41 +23,41 @@
                         </a>
                     </li>
                     <li class="dropdown nav-item">
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button">
+                        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                             <span class="fa fa-list-alt"></span> Réalisations <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu" role="menu">
+                        <ul class="dropdown-menu .dropdown-menu-end" role="menu">
                             <li role="presentation" class="dropdown-header dropdown-item">
                                 En autonomie</li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Bot Discord Eski</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Bot Discord Eski</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Texturisation modèle 3D</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Texturisation modèle 3D</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Configuration de modèle 3D</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Configuration de modèle 3D</a>
                             </li>
                             <li role="presentation" class="dropdown-header dropdown-item">
                                 Pendant mes études</li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="/pages/realisation/Nolark.php">Nolark</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="/pages/realisation/Nolark.php">Nolark</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Mon portfolio</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Mon portfolio</a>
                             </li>
                             <li role="presentation" class="dropdown-header dropdown-item">
                                 En entreprise</li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Projet de 1ère année</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Projet de 1ère année</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Projet de 2ème année</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Projet de 2ème année</a>
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown nav-item">
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button">
+                        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button">
                             <span class="fa fa-graduation-cap"></span>
                             Jury E5 BTS SIO
                             <span class="caret"></span>
@@ -64,44 +65,44 @@
                         <ul class="dropdown-menu" role="menu">
                             <li class="dropdown-header dropdown-item" role="presentation">
                                 Documentations contexte</li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Présentation</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Présentation</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Application</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Application</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Missions à réaliser</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Missions à réaliser</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Annexes</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Annexes</a>
                             </li>
                             <li role="presentation" class="dropdown-divider"></li>
                             <li role="presentation" class="dropdown-header dropdown-item">
                                 Fiches d'examen</li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Situation professionnelle n°1</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Situation professionnelle n°1</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Situation professionnelle n°2</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Situation professionnelle n°2</a>
                             </li>
                             <li role="presentation" class="dropdown-divider"></li>
                             <li role="presentation" class="dropdown-header dropdown-item">
                                 Démonstrations</li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Démo SP n°1</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Démo SP n°1</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Démo SP n°2</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Démo SP n°2</a>
                             </li>
                             <li role="presentation" class="dropdown-divider"></li>
                             <li role="presentation" class="dropdown-header dropdown-item">
                                 Codes sources</li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Sources SP n°1</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Sources SP n°1</a>
                             </li>
-                            <li role="presentation" class="dropdown-item">
-                                <a role="menuitem" href="#">Sources SP n°2</a>
+                            <li role="presentation">
+                                <a class="dropdown-item" role="menuitem" href="#">Sources SP n°2</a>
                             </li>
                         </ul>
                     </li>
