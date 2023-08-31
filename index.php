@@ -36,4 +36,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-require('./view/default.php');
+$headerContent = null;
+require('./model/default.php');
