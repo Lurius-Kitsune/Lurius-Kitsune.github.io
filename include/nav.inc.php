@@ -9,6 +9,10 @@
             height: 100%;
         }
 
+        .navbar {
+            border-right: 10px ridge rgba(50, 61, 220, 1);
+        }
+
         .fixed-left {
             position: fixed;
             z-index: 1030;
