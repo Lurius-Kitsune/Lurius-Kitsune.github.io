@@ -17,6 +17,10 @@
             position: fixed;
             z-index: 1030;
         }
+
+        nav {
+            font-family: "Pacifico", sans-serif !important;
+        }
     }
 
 </style>
