@@ -1,25 +1,15 @@
-<!doctype html>
-<html lang="fr">
-
-<head>
-    <?php require_once __DIR__ . '/../include/head.inc.html'; ?>
-    <link href="/css/cv.css" rel="stylesheet">
-</head>
-
-<body>
-    <?php require_once __DIR__ . '/../include/nav.inc.php'; ?>
-
-    <div class="p-5 mb-4 bg-body-tertiary rounded-3 img-1">
-        <div class="container">
-            <div class="row cadreCV">
-                <div id="cv-entete" class="text-center">
-                    <div id="cv-photo">
-                        <img src="../images/identiter.jpg" alt="Ma photo d'identité">
-                    </div>
-                    <div id="cv-intro">
-                        <h1>Bonjour, je m'appelle <span class="text-primary underline">Lucas</span> et voici mon CV</h1>
-                    </div>
+<?php ob_start(); ?>
+<div class="p-5 mb-4 bg-body-tertiary img-1">
+    <div class="container">
+        <div class="row cadreCV">
+            <div id="cv-entete" class="text-center">
+                <div id="cv-photo">
+                    <img src="../images/identiter.jpg" alt="Ma photo d'identité">
                 </div>
+                <div id="cv-intro">
+                    <h1>Bonjour, je m'appelle <span class="text-primary underline">Lucas</span> et voici mon CV</h1>
+                </div>
+            </div>
 
                 <div class="col-xs-12 col-sm-7">
                     <!-- Partie gauche -->
@@ -91,22 +81,6 @@
                                 <div class="date">2021 (6 sem.)</div>
                             </div>
                             <div class="col-9">
-                                <div class="profession">Developpeur Python</div>
-                                <div class="details">
-                                    <ul>
-                                        <li>Développement d’une API ainsi qu’une REST API en Python.</li>
-                                        <li>Travaille sur un début de projet d’un client de l’entreprise.</li>
-                                        <li>Découverte de python en autodidacte.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="experience clearfix">
-                            <div class="col-3">
-                                <div class="lieu">Linexos</div>
-                                <div class="date">2021 (6 sem.)</div>
-                            </div>
-                            <div class="col-9">
                                 <div class="profession">Developpement Python</div>
                                 <div class="details">
                                     <ul>
@@ -117,6 +91,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="experience clearfix">
                             <div class="col-3">
                                 <div class="lieu">Progial</div>
@@ -233,9 +208,7 @@
             </div>
         </div>
     </div> <!-- Emplacement pour le contenu principal de la page -->
-    <footer>
-        <?php require_once __DIR__ . '/../include/Defaultfooter.php'; ?>
-    </footer>
-</body>
-
-</html>
+    <?php
+    $content = ob_get_clean();
+$headerContent = '<link href="/css/cv.css" rel="stylesheet">';
+require('../../model/default.php');
