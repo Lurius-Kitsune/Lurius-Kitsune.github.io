@@ -12,7 +12,7 @@
         <div class="row justify-content-end"> 
             <div class="col-lg-10 nopadding">
                 <div class="p-5 mb-4 bg-body-tertiary img-1">
-                    <div class="mt-5 box-lg rounded-top border-sm border-blue bg-white">
+                    <div class="box-lg rounded-top border-sm border-blue bg-white">
                         <h1 class="underline">LUCAS BRUEL, FUTUR GAME DÉVELOPPEUR</h1>
                         <img src="images/identiter.jpg" alt="Mon visage" class="img-thumbnail mr-2 float-left "
                             style="height: 310px;">
