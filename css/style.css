@@ -1,3 +1,8 @@
+.nopadding {
+    padding: 0px !important;
+}
+
+
 .img-1 {
     background-image: url(images/background.jpg);
     background-attachment: scroll;
