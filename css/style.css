@@ -1,3 +1,12 @@
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.nopadding {
+    padding: 0px !important;
+}
+
+
 .img-1 {
     background-image: url(images/background.jpg);
     background-attachment: scroll;
@@ -34,14 +43,12 @@
     border-color: rgba(50, 61, 220, 0.6) !important;
 }
 
-.border-red {
+.border-black {
     border-style: ridge !important;
-    border-color: rgba(220, 50, 50, 0.6) !important;
+    border-color: rgba(0, 0, 0, 0.6) !important;
 }
 
-
-@media (max-width: 578px) {
-    .jumbotron {
-        margin-top: 2.5rem;
-    }
+.border-red {
+    border-style: ridge !important;
+    border-color: rgba(255, 0, 0, 1) !important;
 }
