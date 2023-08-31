@@ -187,7 +187,8 @@
         </div>
     </div>
 </div> <!-- Emplacement pour le contenu principal de la page -->
+
 <?php
 $content = ob_get_clean();
 $headerContent = '<link href="/css/cv.css" rel="stylesheet">';
-require('../view/default.php');
+require('../model/default.php');
