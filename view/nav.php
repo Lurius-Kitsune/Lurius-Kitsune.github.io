@@ -2,28 +2,7 @@
 
     $activePage = $_SERVER['REQUEST_URI'];
 ?>
-<style>
-    @media screen and (min-width:992px) {
-        .navbar, .nav {
-            flex-direction: column !important;
-            height: 100%;
-        }
-
-        .navbar {
-            border-right: 10px ridge rgba(50, 61, 220, 1);
-        }
-
-        .fixed-left {
-            position: fixed;
-            z-index: 1030;
-        }
-
-        nav {
-            font-family: "Pacifico", sans-serif !important;
-        }
-    }
-
-</style>
+<link rel="stylesheet" href="/css/nav.css">
 <nav class="navbar navbar-dark bg-primary fixed-left navbar-expand-md col-lg-2">
     <div class="container-fluid nav">
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
