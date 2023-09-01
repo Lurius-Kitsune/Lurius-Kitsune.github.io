@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-<div class="p-5 mb-4 bg-body-tertiary img-1">
+<div class="p-5 bg-body-tertiary img-1">
     <div class="box-lg rounded-top border-sm border-red bg-white">
         <h1 class="underline">LUCAS BRUEL, FUTUR GAME DÉVELOPPEUR</h1>
         <img src="images/identiter.jpg" alt="Mon visage" class="img-thumbnail mr-2 float-left " style="height: 310px;">
