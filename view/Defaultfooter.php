@@ -1,6 +1,6 @@
-<div class="container pt-4">
+<div class="container pt-3">
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 border-rainbow">
             <h2>Étudiant au lycée Bonaparte</h2>
             <p>J'ai choisi de suivre le BTS SIO au lycée Bonaparte dû aux échos d'une formation en «béton»,
                 car je souhaitais pouvoir suivre cette formation dans un lieu où je pourrais être sur de la
@@ -11,7 +11,7 @@
                     plus »</a>
             </p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 border-rainbow">
             <h2>Aprés ce BTS SIO ? </h2>
             <p>Tout d'abord, je me suis axé dans l'option SLAM : "Solutions logicielles et Applications Métiers",
                 étant donné que je souhaite m'approcher du métier de développeur en maîtrisant les bases du
@@ -26,7 +26,7 @@
                     savoir plus »</a>
             </p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 border-rainbow">
             <h2>Anecdote</h2>
             <p>Connaissez-vous le "Konami&nbsp;Code" ? C'est l'un code triche crée l'entreprise Konami, 
                 on peut l'appeler le code triche par référence, et il consiste à une série de combinaisons 

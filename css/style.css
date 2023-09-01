@@ -37,6 +37,11 @@ body {
     border-width: 10px !important
 }
 
+.border-xsm {
+    border-width: 5px !important
+}
+
+
 /*couleur*/
 .border-blue {
     border-style: ridge !important;
@@ -52,3 +57,29 @@ body {
     border-style: ridge !important;
     border-color: rgba(255, 0, 0, 1) !important;
 }
+
+.border-rainbow {
+    border-style: ridge !important;
+    border-right: 5px !important;
+    border-left: 5px !important;
+    border-radius: 10%;
+    animation-name: rainbow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    padding-top: 10px !important;
+}
+
+/* The animation code */
+@keyframes rainbow {
+    0%   {border-color: red;}
+    10%  {border-color: yellow;}
+    20%  {border-color: lightblue;}
+    30%  {border-color: blue;}
+    40%  {border-color: blueviolet;}
+    50%  {border-color: violet;}
+    60%  {border-color: pink;}
+    70%  {border-color: orange;}
+    80%  {border-color: maroon;}
+    90%  {border-color: rgb(0, 255, 34);}
+    100% {border-color: green;}
+  }
