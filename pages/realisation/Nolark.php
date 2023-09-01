@@ -1,5 +1,5 @@
 <?php ob_start(); ?>
-<div class="p-5 mb-4 bg-body-tertiary rounded-34 img-1">
+<div class="p-5 bg-body-tertiary rounded-34 img-1">
 
     <div class="box-lg rounded bg-white">
         <h3 class="text-center underline">

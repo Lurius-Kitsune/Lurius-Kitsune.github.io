@@ -1,10 +1,13 @@
 <!doctype html>
 <html lang="fr">
-
+<style>
+    .bordertop {
+        border-top: 10px ridge var(--bs-info);
+    }
+</style>
 <head>
-    <?php 
-    
-        require_once __DIR__ . '/../view/head.html'; 
+    <?php
+        require_once __DIR__ . '/../view/head.html';
         echo $headerContent
     ?>
 </head>
@@ -19,7 +22,7 @@
         </div>
 
         <div class="row justify-content-end">
-            <div class="col-lg-10 nopadding">
+            <div class="col-lg-10 nopadding bordertop">
                 <footer>
                     <?php require_once __DIR__ . '/../view/Defaultfooter.php'; ?>
                 </footer> 
