@@ -1,7 +1,7 @@
 <?php
 ob_start();
 ?>
-
+<script src="/js/home.js" crossorigin="anonymous"></script>
 <div class="p-5 bg-body-tertiary img-1">
     <div class="box-lg rounded-top border-sm border-red bg-white">
         <h1 class="underline">LUCAS BRUEL, FUTUR GAME DÉVELOPPEUR</h1>

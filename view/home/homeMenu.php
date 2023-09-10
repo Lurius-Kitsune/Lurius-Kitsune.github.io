@@ -1,14 +1,14 @@
-<ul class="nav nav-underline pt-3">
+<ul class="nav nav-underline pt-3" id="home-menu">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Étude</a>
+    <button class="nav-link active" id="home-study">Étude</button>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Compétence</a>
+    <button class="nav-link" id="home-skill">Compétence</button>
   </li>
   <li class="nav-item">
-    <a class="nav-link" aria-disabled="true">Expérience</a>
+    <button class="nav-link" id="home-company">Expérience</button>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" href="#">Projet</a>
+    <button class="nav-link disabled" aria-disabled="true" id="home-project">Projet</button>
   </li>
 </ul>

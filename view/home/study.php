@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="home-study-content">
     <div class="col-xs-12 col-sm-7">
         <div class="rubrique clearfix">
             <ul id="parcours" class="clearfix">
