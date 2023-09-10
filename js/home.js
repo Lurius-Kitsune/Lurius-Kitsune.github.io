@@ -16,7 +16,19 @@ $(window).on("load", function () {
             $linkContent.removeClass("d-none");
         }
         else {
-            //TODO: add ajax call to get content
+            //request content from server and parse it to html
+            $.ajax({
+                url: "/controller/homeController.php",
+                type: "POST",
+                data: { "content": clickedButtonId },
+                success: function (data) {
+                    $(data).insertAfter("#home-menu");
+                    console.log(data);
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
         }
     });
 });
