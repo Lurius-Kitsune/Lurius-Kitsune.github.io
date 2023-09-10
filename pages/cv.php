@@ -2,14 +2,7 @@
 <div class="p-5 bg-body-tertiary img-1">
     <div class="container">
         <div class="row cadreCV">
-            <div id="cv-entete" class="text-center">
-                <div id="cv-photo">
-                    <img src="../images/identiter.jpg" alt="Ma photo d'identité">
-                </div>
-                <div id="cv-intro">
-                    <h1>Bonjour, je m'appelle <span class="text-primary underline">Lucas</span> et voici mon CV</h1>
-                </div>
-            </div>
+            
 
             <div class="col-xs-12 col-sm-7">
                 <!-- Partie gauche -->
@@ -206,5 +199,5 @@
 </div> <!-- Emplacement pour le contenu principal de la page -->
 <?php
 $content = ob_get_clean();
-$headerContent = '<link href="/css/cv.css" rel="stylesheet">';
+$headerContent = '<link href="/css/index.css" rel="stylesheet">';
 require('../model/default.php');

@@ -36,5 +36,6 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-$headerContent = null;
+$headerContent = '<link href="/css/index.css" rel="stylesheet">';
+
 require('./model/default.php');
