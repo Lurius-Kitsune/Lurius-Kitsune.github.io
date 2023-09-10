@@ -47,3 +47,19 @@
     </p>
     <p class="text-center" id="copyright">© Lucas Bruel 2022-2024</p>
 </div>
+
+<script>
+
+document.querySelectorAll('.dyn-text-owner').forEach(function(el) {
+    new Typed(el, {
+    strings: ['<?= getAge('11/04/2003') . ' ans'; ?>', 'Lurius ?', 'BTS SIO', 'Dev. Jeux Vidéo', '↑ ↑ ↓ ↓← → ← → B A'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      smartBackspace: 1,
+      loop: 0,
+      startDelay: 700, 
+      backDelay: 2000,
+      shuffle: true,
+  })
+});
+</script>

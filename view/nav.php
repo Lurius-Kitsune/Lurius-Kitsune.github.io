@@ -123,51 +123,8 @@ function getAge(string $birthDate)
             </ul>
         </div>
     </div>
-    <div id="cv-entete" class="text-center text-light">
-        <div id="cv-photo">
-            <img src="../images/identiter.jpg" alt="Ma photo d'identité">
-        </div>
-        <div id="cv-intro">
-            <h5>Lucas</h5>
-            <h5><span id="dyn-text-nav"></span></h5>
-        </div>
-        <div class="contact row">
-            <div class="col meContacter">
-                <div class="float-left">
-                    <a href="mailto:lucasfox@outlook.fr?subject=Contact depuis le CV en ligne" title="Mail de Lucas Bruel">
-                        <img class="contact-icon" src="../images/cv/mail-dreamstale47.png" alt="Icone de mail">
-                    </a>
-                </div>
-            </div>
-            <div class="col meContacter">
-                <div class="float-left">
-                    <a href="https://github.com/Lurius-Kitsune" title="Lien vers le profil GitHub de Lucas Bruel">
-                        <img class="contact-icon" src="../images/cv/github2-dreamstale35.png" alt="Icone de GitHub">
-                    </a>
-                </div>
-            </div>
-            <div class="col meContacter">
-                <div class="float-left">
-                    <a href="https://www.linkedin.com/in/lucas-bruel-547179278/" title="Lien vers le profil GitHub de Lucas Bruel">
-                        <img class="contact-icon" src="../images/cv/linkedin-dreamstale45.png" alt="Icone de Linkdin">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php require('../view/owner.php'); ?>
 </nav>
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script>
-    var typed = new Typed('#dyn-text-nav', {
-      strings: ['<?= getAge('11/04/2003') . ' ans'; ?>', 'Lurius ?', 'BTS SIO', 'Dev. Jeux Vidéo', '↑ ↑ ↓ ↓← → ← → B A'],
-      typeSpeed: 50,
-      backSpeed: 50,
-      smartBackspace: 1,
-      loop: 0,
-      startDelay: 700, 
-      backDelay: 2000,
-      shuffle: true,
-    });
-  </script>

@@ -5,42 +5,7 @@
     border: 10px ridge rgba(50, 61, 220, 0.6);
 }
 
-/****************************************
-* En-tête du CV
-****************************************/
-#cv-entete { 
-    margin-top: -45px; 
-    width: 100%;
 
-}
-#cv-photo { width: 172px; 
-            height: 172px; 
-            border-radius: 50%; 
-            overflow: hidden; 
-            padding: 5px;
-            background: #0000004a; 
-            display: inline-block; 
-}
-
-#cv-photo img { width: 160px; 
-                height: 160px; 
-                border-radius: 50%; 
-}
-
-#cv-intro h1 { margin: 0; 
-               padding: 0;
-               font-size: 2.4em; 
-               font-weight: 700;
-               letter-spacing: -1px;
-}
-
-#cv-intro h1 span { color: rgb(226,0,26); }
-
-@media screen and (max-width: 992px) {
-    nav #cv-entete {
-        display: none;
-    }
-}
 
 /****************************************
 * Rubriques
