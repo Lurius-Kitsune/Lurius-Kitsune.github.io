@@ -1,5 +1,5 @@
 @media screen and (min-width:992px) {
-    .navbar, .nav {
+    .navbar, .navbar .nav {
         flex-direction: column !important;
         height: 100%;
     }
@@ -17,5 +17,4 @@
 
 nav {
     font-family: "Pacifico", sans-serif !important;
-    z-index: 999999;
 }

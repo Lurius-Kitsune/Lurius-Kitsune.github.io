@@ -17,7 +17,7 @@ function getAge(string $birthDate)
 
 ?>
 <link rel="stylesheet" href="/css/nav.css">
-<nav class="navbar navbar-dark bg-primary fixed-left navbar-expand-md col-lg-2">
+<nav class="navbar navbar-dark bg-primary fixed-left navbar-expand-md col-lg-2" id="menu">
     <div class="container-fluid nav">
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar">
             <span class="sr-only">Navigation raccourcie</span>☰

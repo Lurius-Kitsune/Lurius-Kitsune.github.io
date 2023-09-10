@@ -31,6 +31,9 @@ ob_start();
             </p>
             <a href="/pages/cv.php"><button class="btn btn-danger" style="width: 150px">En savoir plus »</button></a>
         </div>
+
+        <?php require_once __DIR__ . '/view/home/homeMenu.php' ?>
+        <?php require_once __DIR__ . '/view/home/study.php' ?>
     </div>
 </div>
 
