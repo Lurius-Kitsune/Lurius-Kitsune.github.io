@@ -123,7 +123,7 @@ function getAge(string $birthDate)
             </ul>
         </div>
     </div>
-    <?php require('../view/owner.php'); ?>
+    <?php require(__DIR__ . '/owner.php'); ?>
 </nav>
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

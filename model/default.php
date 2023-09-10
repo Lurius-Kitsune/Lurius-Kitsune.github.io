@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <div class="row justify-content-end">
             <div class="col-lg-10 nopadding img-1" id="content">
-                <?php require('../view/owner.php'); ?>
+                <?php require(__DIR__ . '/../view/owner.php'); ?>
                 <?= $content; ?>
             </div>
         </div>
