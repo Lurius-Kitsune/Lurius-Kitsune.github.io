@@ -1,12 +1,25 @@
 <?php
+// Path: view/nav.php
+//extract from https://stackoverflow.com/questions/3776682/php-calculate-age
+function getAge(string $birthDate)
+{
+    //date in mm/dd/yyyy format; or it can be in other formats as well
+    //explode the date to get month, day and year
+    $birthDate = explode("/", $birthDate);
+    //get age from date or birthdate
+    $age = (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md")
+        ? ((date("Y") - $birthDate[2]) - 1)
+        : (date("Y") - $birthDate[2]));
+    return $age;
+}
 
-    $activePage = $_SERVER['REQUEST_URI'];
+$activePage = $_SERVER['REQUEST_URI'];
+
 ?>
 <link rel="stylesheet" href="/css/nav.css">
-<nav class="navbar navbar-dark bg-primary fixed-left navbar-expand-md col-lg-2">
+<nav class="navbar navbar-dark bg-primary fixed-left navbar-expand-md col-lg-2" id="menu">
     <div class="container-fluid nav">
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
-            aria-controls="navbar">
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar">
             <span class="sr-only">Navigation raccourcie</span>☰
         </button>
         <a class="navbar-brand" href="#">Mon portfolio</a>
@@ -15,11 +28,6 @@
                 <li class="nav-item">
                     <a href="/" class="<?= $activePage === '/' ? 'active' : ''; ?> nav-link">
                         <span class="fa fa-home"></span> Accueil
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/pages/cv.php" class="<?= $activePage === '/pages/cv.php' ? 'active' : ''; ?> nav-link">
-                        <span class="fa fa-id-badge"></span> C.V
                     </a>
                 </li>
                 <li class="dropdown nav-item">
@@ -110,9 +118,11 @@
             </ul>
         </div>
     </div>
+    <?php require(__DIR__ . '/owner.html'); ?>
 </nav>
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>

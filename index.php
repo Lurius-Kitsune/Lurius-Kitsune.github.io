@@ -1,7 +1,7 @@
 <?php
 ob_start();
 ?>
-
+<script src="/js/home.js" crossorigin="anonymous"></script>
 <div class="p-5 bg-body-tertiary img-1">
     <div class="box-lg rounded-top border-sm border-red bg-white">
         <h1 class="underline">LUCAS BRUEL, FUTUR GAME DÉVELOPPEUR</h1>
@@ -29,12 +29,18 @@ ob_start();
                 développement informatique,
                 je souhaite poursuivre mon expérience professionnelle dans ce domaine afin de devenir "game dev"
             </p>
-            <a href="/pages/cv.php"><button class="btn btn-danger" style="width: 150px">En savoir plus »</button></a>
+        </div>
+
+        <?php require_once __DIR__ . '/view/home/homeMenu.html' ?>
+
+        <div class="pt-3" id="home-content-wrapper">
+            <?php require_once __DIR__ . '/view/home/study.html' ?>
         </div>
     </div>
 </div>
 
 <?php
 $content = ob_get_clean();
-$headerContent = null;
+$headerContent = '<link href="/css/index.css" rel="stylesheet">';
+
 require('./model/default.php');

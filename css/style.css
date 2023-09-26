@@ -1,3 +1,6 @@
+/****************************************
+* Style
+****************************************/
 body {
     font-family: 'Poppins', sans-serif !important;
 }
@@ -6,7 +9,9 @@ body {
     padding: 0px !important;
 }
 
-
+/****************************************
+* Background
+****************************************/
 .img-1 {
     background-image: url(images/background.jpg);
     background-attachment: scroll;
@@ -24,14 +29,18 @@ body {
     padding: 15px;
 }
 
-/*Text edit*/
+/****************************************
+* Text Edit
+****************************************/
 
 .underline {
     text-decoration: underline;
 }
 
 
-/*Utilisation de bordure*/
+/****************************************
+* Border
+****************************************/
 /*Taille de la bordure*/
 .border-sm {
     border-width: 10px !important
@@ -42,7 +51,7 @@ body {
 }
 
 
-/*couleur*/
+/*Color border */
 .border-blue {
     border-style: ridge !important;
     border-color: rgba(50, 61, 220, 0.6) !important;
@@ -69,7 +78,7 @@ body {
     padding-top: 10px !important;
 }
 
-/* The animation code */
+/* The animation code for rainbow border */
 @keyframes rainbow {
     0%   {border-color: red;}
     10%  {border-color: yellow;}
