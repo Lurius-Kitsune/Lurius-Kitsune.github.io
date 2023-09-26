@@ -23,10 +23,9 @@ $(window).on("load", function () {
                 data: { "content": clickedButtonId },
                 success: function (data) {
                     $(data).insertAfter("#home-menu");
-                    console.log(data);
                 },
                 error: function (data) {
-                    console.log(data);
+                    console.error("Erreur dans le chargement du contenu de la page")
                 }
             });
         }
