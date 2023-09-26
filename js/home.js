@@ -22,7 +22,7 @@ $(window).on("load", function () {
                 type: "POST",
                 data: { "content": clickedButtonId },
                 success: function (data) {
-                    $(data).insertAfter("#home-menu");
+                    $(data).appendTo("#home-content-wrapper");
                 },
                 error: function (data) {
                     console.error("Erreur dans le chargement du contenu de la page")

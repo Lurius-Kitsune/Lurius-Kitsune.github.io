@@ -33,7 +33,10 @@ ob_start();
         </div>
 
         <?php require_once __DIR__ . '/view/home/homeMenu.html' ?>
-        <?php require_once __DIR__ . '/view/home/study.html' ?>
+
+        <div class="pt-3" id="home-content-wrapper">
+            <?php require_once __DIR__ . '/view/home/study.html' ?>
+        </div>
     </div>
 </div>
 
