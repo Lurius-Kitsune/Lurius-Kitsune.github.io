@@ -30,11 +30,6 @@ function getAge(string $birthDate)
                         <span class="fa fa-home"></span> Accueil
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/pages/cv.php" class="<?= $activePage === '/pages/cv.php' ? 'active' : ''; ?> nav-link">
-                        <span class="fa fa-id-badge"></span> C.V
-                    </a>
-                </li>
                 <li class="dropdown nav-item">
                     <a href="#" class="<?= $activePage === '/pages/realisation/Nolark.php' ? 'active' : ''; ?> 
                             dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button" aria-expanded="false">

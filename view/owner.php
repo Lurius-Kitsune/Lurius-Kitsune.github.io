@@ -4,7 +4,7 @@
     </div>
     <div id="cv-intro">
         <h5>Lucas</h5>
-        <h5>Je suis <span class="dyn-text-owner"></span></h5>
+        <h5>[ <span class="dyn-text-owner"></span>]</h5>
     </div>
     <div class="contact row">
         <div class="col meContacter">
