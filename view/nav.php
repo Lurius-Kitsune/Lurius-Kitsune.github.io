@@ -1,7 +1,5 @@
 <?php
-
-$activePage = $_SERVER['REQUEST_URI'];
-
+// Path: view/nav.php
 //extract from https://stackoverflow.com/questions/3776682/php-calculate-age
 function getAge(string $birthDate)
 {
@@ -14,6 +12,8 @@ function getAge(string $birthDate)
         : (date("Y") - $birthDate[2]));
     return $age;
 }
+
+$activePage = $_SERVER['REQUEST_URI'];
 
 ?>
 <link rel="stylesheet" href="/css/nav.css">
@@ -118,7 +118,7 @@ function getAge(string $birthDate)
             </ul>
         </div>
     </div>
-    <?php require(__DIR__ . '/owner.php'); ?>
+    <?php require(__DIR__ . '/owner.html'); ?>
 </nav>
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
