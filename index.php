@@ -29,7 +29,6 @@ ob_start();
                 développement informatique,
                 je souhaite poursuivre mon expérience professionnelle dans ce domaine afin de devenir "game dev"
             </p>
-            <a href="/pages/cv.php"><button class="btn btn-danger" style="width: 150px">En savoir plus »</button></a>
         </div>
 
         <?php require_once __DIR__ . '/view/home/homeMenu.html' ?>
