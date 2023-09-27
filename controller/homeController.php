@@ -11,7 +11,7 @@ if (isset($_POST['content'])) {
             require_once __DIR__ . '/../view/home/study.html';
             exit();
         case 'home-skill':
-            require_once __DIR__ . '/../view/home/skill.html';
+            require_once __DIR__ . '/../view/home/skill.php';
             exit();
         default:
             //trow 404 error

@@ -1,0 +1,44 @@
+.skill-level {
+	height: 1em;
+	margin: 10px 0px;
+    width: 160px;
+}
+.skill-level span {
+	background: linear-gradient(rgb(97, 0, 153), rgb(190, 51, 255), rgb(105, 0, 153));
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.7);
+	width: 11px;
+	height: 20px;
+	display: inline-block;
+	margin: 0 1px;
+}
+.show-0 span:nth-child(n + 1) {
+	background: black;
+}
+.show-1 span:nth-child(n + 2) {
+	background: black;
+}
+.show-2 span:nth-child(n + 3) {
+	background: black;
+}
+.show-3 span:nth-child(n + 4) {
+	background: black;
+}
+.show-4 span:nth-child(n + 5) {
+	background: black;
+}
+.show-5 span:nth-child(n + 6) {
+	background: black;
+}
+.show-6 span:nth-child(n + 7) {
+	background: black;
+}
+.show-7 span:nth-child(n + 8) {
+	background: black;
+}
+.show-8 span:nth-child(n + 8) {
+	background: black;
+}
+.show-9 span:nth-child(n + 10) {
+	background: black;
+}
