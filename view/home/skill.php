@@ -11,7 +11,9 @@ for ($i = 0; $i < 10; $i++) {
         <div class="row">
             <div class="col-lg-6 rubrique clearfix">
                 <div id="langues" class="cardbox">
-                    <h2 class="underline"><span class="fa fa-flag"></span> Langue</h2>
+                    <h3 class="underline">
+                        <span class="fa fa-flag"></span> Langue
+                    </h3>
                     <div class="container">
                         <div class="langue">Français</div>
                         <div class="niveau">
@@ -35,9 +37,9 @@ for ($i = 0; $i < 10; $i++) {
                         </div>
                     </div>
                 </div>
-                <div class="cardbox">
+                <div class="cardbox competences">
                     <h3 class="underline">
-                        <i class="fa fa-duotone fa-swatchbook"></i>???
+                        <i class="fa fa-duotone fa-swatchbook"></i> ???
                     </h3>
                     <div class="container">
                         <div class="libelle">Intégration web</div>
@@ -59,10 +61,10 @@ for ($i = 0; $i < 10; $i++) {
                     </div>
                 </div>
             </div>
-            <div id="competences" class="col-lg-6 rubrique clearfix">
-                <div class="cardbox">
+            <div class="col-lg-6 rubrique clearfix">
+                <div class="cardbox competences">
                     <h3 class="underline">
-                        <i class="fa fa-duotone fa-swatchbook"></i>Artistique
+                        <i class="fa fa-duotone fa-swatchbook"></i> Artistique
                     </h3>
                     <div class="container">
                         <div class="libelle">Texurisation 3D</div>
@@ -77,9 +79,9 @@ for ($i = 0; $i < 10; $i++) {
                         </div>
                     </div>
                 </div>
-                <div id="langue_prog" class="cardbox">
+                <div id="langue_prog" class="cardbox competences">
                     <h3 class="text-primary underline">
-                        <span class="fa fa-duotone fa-computer"></span> Langues de programmation
+                        <span class="fa fa-duotone fa-computer"></span> Programmation
                     </h3>
                     <div class="container">
                         <div class="libelle">Orienté Objet</div>
