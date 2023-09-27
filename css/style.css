@@ -29,6 +29,19 @@ body {
     padding: 15px;
 }
 
+.cardbox{
+    margin: 0px auto; 
+    width: 100%; 
+    padding: 15px;
+    background-color: rgba(0, 174, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 16px 50px 21px rgba(2,0,255,0.3);
+}
+
+.cardbox:nth-child(n + 2) {
+	margin-top: 20px;
+}
+
 /****************************************
 * Text Edit
 ****************************************/
