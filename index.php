@@ -1,4 +1,5 @@
 <?php
+
 ob_start();
 ?>
 <script src="/js/home.js" crossorigin="anonymous"></script>

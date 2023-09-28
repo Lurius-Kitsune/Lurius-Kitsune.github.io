@@ -18,8 +18,7 @@ class Pager
     {
         if (!file_exists($page)) {
             throw new \Exception("La page n'existe pas" . $page);
-        }
-        else {
+        } else {
             $this->page = $page;
         }
         $this->vars = $vars;
