@@ -8,7 +8,6 @@ for ($i = 0; $i < 10; $i++) {
 <link rel="stylesheet" href="/css/skill.css">
 <div id="home-skill-content" class="rubrique clearfix">
     <div class="row justify-content-end">
-        <div class="row">
             <div class="col-lg-6 rubrique clearfix">
                 <div id="langues" class="cardbox">
                     <h3 class="underline">
@@ -119,7 +118,6 @@ for ($i = 0; $i < 10; $i++) {
                             <?= $skillJauge ?>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
