@@ -11,7 +11,7 @@
  */
 ?>
 
-<div id="work-experience-wrapper" class="experience clearfix cardbox">
+<div id="work-experience-wrapper" class="experience clearfix cardbox" data-aos="flip-up" data-aos-easing="ease-out-cubic">
     <div class="row justify-content-end">
         <div class="col-lg-2">
             <div class="lieu"><?= $companyName; ?>&nbsp;<?= $isNew ? '<span class="badge text-bg-info">New</span>' : null; ?>

@@ -26,9 +26,13 @@ $(window).on("load", function () {
                 },
                 error: function (data) {
                     console.error("Erreur dans le chargement du contenu de la page")
+                },
+                complete: function () {
+                    AOS.init();
                 }
             });
         }
+        AOS.init();
     });
 });
 
