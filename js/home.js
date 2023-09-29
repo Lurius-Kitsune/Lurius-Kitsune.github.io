@@ -18,7 +18,7 @@ $(window).on("load", function () {
         else {
             //request content from server and parse it to html
             $.ajax({
-                url: "/controller/c_homeMenu.php",
+                url: "/controller/home/c_homeMenu.php",
                 type: "POST",
                 data: { "content": clickedButtonId },
                 success: function (data) {

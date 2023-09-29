@@ -8,17 +8,17 @@
 
 <head>
     <?php
-    require_once __DIR__ . '/../view/head.html';
+    require_once __DIR__ . '/../view/v_head.html';
     echo $headerContent
     ?>
 </head>
 
 <body>
-    <?php require_once __DIR__ . '/../view/nav.php'; ?>
+    <?php require_once __DIR__ . '/../view/v_nav.php'; ?>
     <div class="container-fluid">
         <div class="row justify-content-end">
             <div class="col-lg-10 nopadding img-1" id="content">
-                <?php require(__DIR__ . '/../view/owner.html'); ?>
+                <?php require(__DIR__ . '/../view/v_owner.html'); ?>
                 <?= $content; ?>
             </div>
         </div>
@@ -26,7 +26,7 @@
         <div class="row justify-content-end">
             <div class="col-lg-10 nopadding bordertop">
                 <footer>
-                    <?php require_once __DIR__ . '/../view/Defaultfooter.php'; ?>
+                    <?php require_once __DIR__ . '/../view/v_defaultfooter.php'; ?>
                 </footer>
             </div>
         </div>

@@ -118,7 +118,7 @@ $activePage = $_SERVER['REQUEST_URI'];
             </ul>
         </div>
     </div>
-    <?php require(__DIR__ . '/owner.html'); ?>
+    <?php require(__DIR__ . '/v_owner.html'); ?>
 </nav>
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

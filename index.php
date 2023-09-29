@@ -1,10 +1,7 @@
 <?php
 
+require_once __DIR__ . '/tools/autoload.php';
 ob_start();
-
-spl_autoload_register(function ($class_name) {
-    include __DIR__ . '/' . $class_name . '.php';
-});
 
 ?>
 <script src="/js/home.js" crossorigin="anonymous"></script>
@@ -37,7 +34,7 @@ spl_autoload_register(function ($class_name) {
             </p>
         </div>
 
-        <?php require_once __DIR__ . '/view/home/homeMenu.html' ?>
+        <?php require_once __DIR__ . '/view/home/v_homeMenu.html' ?>
 
         <div class="pt-3" id="home-content-wrapper">
             <?php require_once __DIR__ . '/controller/home/c_studyWrapper.php' ?>
@@ -49,4 +46,4 @@ spl_autoload_register(function ($class_name) {
 $content = ob_get_clean();
 $headerContent = '<link href="/css/index.css" rel="stylesheet">';
 
-require('./model/default.php');
+require(__DIR__ . '/model/default.php');

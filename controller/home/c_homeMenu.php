@@ -1,21 +1,19 @@
 <?php
 
-spl_autoload_register(function ($class_name) {
-    include __DIR__ . '/../' . $class_name . '.php';
-});
+require_once __DIR__ . '/../../tools/autoload.php';
 
 // Answer post request with html response (for ajax)
 if (isset($_POST['content'])) {
     //switch case for ajax request
     switch ($_POST['content']) {
         case 'home-company':
-            include_once __DIR__ . '/../view/home/companyExp.php';
+            include_once __DIR__ . '/c_companyExp.php';
             exit();
         case 'home-study':
-            require_once __DIR__ . '/home/c_studyWrapper.php';
+            require_once __DIR__ . '/c_studyWrapper.php';
             exit();
         case 'home-skill':
-            require_once __DIR__ . '/../view/home/skill.php';
+            require_once __DIR__ . '/../../view/home/v_skill.php';
             exit();
         default:
             //trow 404 error
