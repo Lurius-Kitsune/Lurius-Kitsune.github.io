@@ -12,7 +12,7 @@ if (isset($_POST['content'])) {
             include_once __DIR__ . '/../view/home/companyExp.php';
             exit();
         case 'home-study':
-            require_once __DIR__ . '/../view/home/study.html';
+            require_once __DIR__ . '/home/c_studyWrapper.php';
             exit();
         case 'home-skill':
             require_once __DIR__ . '/../view/home/skill.php';

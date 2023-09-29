@@ -1,6 +1,11 @@
 <?php
 
 ob_start();
+
+spl_autoload_register(function ($class_name) {
+    include __DIR__ . '/' . $class_name . '.php';
+});
+
 ?>
 <script src="/js/home.js" crossorigin="anonymous"></script>
 <div class="p-5 bg-body-tertiary img-1">
@@ -35,7 +40,7 @@ ob_start();
         <?php require_once __DIR__ . '/view/home/homeMenu.html' ?>
 
         <div class="pt-3" id="home-content-wrapper">
-            <?php require_once __DIR__ . '/view/home/study.html' ?>
+            <?php require_once __DIR__ . '/controller/home/c_studyWrapper.php' ?>
         </div>
     </div>
 </div>
