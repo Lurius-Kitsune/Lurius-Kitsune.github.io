@@ -1,0 +1,20 @@
+@media screen and (min-width:992px) {
+    .navbar, .navbar .nav {
+        flex-direction: column !important;
+        height: 100%;
+    }
+
+    .navbar {
+        border-right: 10px ridge rgb(255, 255, 255);
+        box-shadow: 15px 12px 12px rgba(0, 0, 0, 0.2)
+    }
+
+    .fixed-left {
+        position: fixed;
+        z-index: 1030;
+    }
+}
+
+nav {
+    font-family: "Pacifico", sans-serif !important;
+}
