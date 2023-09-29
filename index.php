@@ -1,6 +1,8 @@
 <?php
 
+require_once __DIR__ . '/tools/autoload.php';
 ob_start();
+
 ?>
 <script src="/js/home.js" crossorigin="anonymous"></script>
 <div class="p-5 bg-body-tertiary img-1">
@@ -32,10 +34,10 @@ ob_start();
             </p>
         </div>
 
-        <?php require_once __DIR__ . '/view/home/homeMenu.html' ?>
+        <?php require_once __DIR__ . '/view/home/v_homeMenu.html' ?>
 
         <div class="pt-3" id="home-content-wrapper">
-            <?php require_once __DIR__ . '/view/home/study.html' ?>
+            <?php require_once __DIR__ . '/controller/home/c_studyWrapper.php' ?>
         </div>
     </div>
 </div>
@@ -44,4 +46,4 @@ ob_start();
 $content = ob_get_clean();
 $headerContent = '<link href="/css/index.css" rel="stylesheet">';
 
-require('./model/default.php');
+require(__DIR__ . '/model/default.php');
