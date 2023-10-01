@@ -23,7 +23,7 @@ ob_start();
         </p>
         <div class="d-flex flex-column">
             <p class="ml-1">
-                Je ne sais pas encore ou cette aventure professionnelle m'amènera, mais je ferais tout afin d'atteindre mon rêve !
+                Je ne sais pas encore ou cette aventure professionnelle m'amènera, mais je ferais tout afin d'atteindre mon rêve&nbsp;!
             </p>
         </div>
 
