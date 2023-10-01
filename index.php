@@ -5,7 +5,7 @@ ob_start();
 
 ?>
 <script src="/js/home.js" crossorigin="anonymous"></script>
-<div class="p-5 bg-body-tertiary img-1">
+<div class="p-lg-5 bg-body-tertiary img-1">
     <div class="box-lg rounded-top border-sm border-red bg-white">
         <img src="images/identiter.jpg" alt="Mon visage" class="img-thumbnail m-auto mb-1 d-block " style="height: 250px;">
         <p class="ml-1">
