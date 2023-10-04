@@ -1,6 +1,7 @@
 <?php
 
 use tools\Pager;
+
 ?>
 
 <div id="home-study-content">
