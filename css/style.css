@@ -15,6 +15,7 @@ body {
 .img-1 {
 	background-image: url(images/background.jpg);
 	background-attachment: scroll;
+    overflow-x: hidden;
 }
 
 .box-lg {
