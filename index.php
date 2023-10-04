@@ -39,4 +39,4 @@ ob_start();
 $content = ob_get_clean();
 $headerContent = '<link href="/css/index.css" rel="stylesheet">';
 
-require(__DIR__ . '/model/default.php');
+require(MODEL . '/default.php');

@@ -10,7 +10,6 @@
  */
 ?>
 
-
 <div class="cardbox-hoverable"  data-aos="fade-up" data-aos-easing="ease-out-cubic">
     <div class="row" id="<?= $studyId; ?>">
         <i class="col-lg-2 fa fa-duotone fa-school" style="font-size: 100px;"></i>

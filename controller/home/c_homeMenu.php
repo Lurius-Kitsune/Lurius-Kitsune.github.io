@@ -7,13 +7,13 @@ if (isset($_POST['content'])) {
     //switch case for ajax request
     switch ($_POST['content']) {
         case 'home-company':
-            include_once __DIR__ . '/c_companyExp.php';
+            include_once CONTROLLER . '/c_companyExp.php';
             exit();
         case 'home-study':
-            require_once __DIR__ . '/c_studyWrapper.php';
+            require_once CONTROLLER . '/c_studyWrapper.php';
             exit();
         case 'home-skill':
-            require_once __DIR__ . '/../../view/home/v_skill.php';
+            require_once VIEW . '/home/v_skill.php';
             exit();
         default:
             //trow 404 error

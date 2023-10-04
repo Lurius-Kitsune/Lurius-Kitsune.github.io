@@ -5,6 +5,7 @@ for ($i = 0; $i < 10; $i++) {
     $skillJauge .= '<span>&nbsp;</span>';
 }
 ?>
+
 <link rel="stylesheet" href="/css/skill.css">
 <div id="home-skill-content" class="rubrique clearfix">
     <div class="row justify-content-end">

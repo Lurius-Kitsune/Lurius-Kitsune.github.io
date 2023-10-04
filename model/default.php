@@ -1,3 +1,7 @@
+<?php
+
+require_once __DIR__ . '/../tools/autoload.php';
+?>
 <!doctype html>
 <html lang="fr">
 <style>
@@ -8,17 +12,17 @@
 
 <head>
     <?php
-    require_once __DIR__ . '/../view/v_head.html';
+    require_once VIEW . '/v_head.html';
     echo $headerContent
     ?>
 </head>
 
 <body>
-    <?php require_once __DIR__ . '/../view/v_nav.php'; ?>
+    <?php require_once VIEW . '/v_nav.php'; ?>
     <div class="container-fluid">
         <div class="row justify-content-end">
             <div class="col-lg-10 nopadding img-1" id="content">
-                <?php require(__DIR__ . '/../view/v_owner.html'); ?>
+                <?php require(VIEW . '/v_owner.html'); ?>
                 <?= $content; ?>
             </div>
         </div>
@@ -26,7 +30,7 @@
         <div class="row justify-content-end">
             <div class="col-lg-10 nopadding bordertop">
                 <footer>
-                    <?php require_once __DIR__ . '/../view/v_defaultfooter.php'; ?>
+                    <?php require_once VIEW . '/v_defaultfooter.php'; ?>
                 </footer>
             </div>
         </div>
