@@ -2,6 +2,9 @@
 
 use tools\Pager;
 
+if (class_exists('tools\Pager')) {
+    echo "OHOH";
+}
 ?>
 
 <div id="home-study-content">
