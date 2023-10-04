@@ -1,6 +1,6 @@
 <?php
 
-use Tools\Pager;
+use tools\Pager;
 
 ?>
 
