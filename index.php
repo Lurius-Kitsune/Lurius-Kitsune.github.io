@@ -30,7 +30,7 @@ ob_start();
         <?php require_once VIEW . '/home/v_homeMenu.html' ?>
 
         <div class="pt-3" id="home-content-wrapper">
-            <?php require_once CONTROLLER . '/c_studyWrapper.php' ?>
+            <?php require_once CONTROLLER . '/home/c_studyWrapper.php' ?>
         </div>
     </div>
 </div>
