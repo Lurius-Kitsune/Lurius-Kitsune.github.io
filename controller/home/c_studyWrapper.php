@@ -1,7 +1,9 @@
 <?php
 
 use tools\Pager;
-
+if (!class_exists('Pager')){
+    echo "OHOH";
+}
 ?>
 
 <div id="home-study-content">
