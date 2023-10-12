@@ -15,7 +15,6 @@ body {
 .img-1 {
 	background-image: url(images/background.jpg);
 	background-attachment: scroll;
-    overflow-x: hidden;
 }
 
 .box-lg {
@@ -32,7 +31,7 @@ body {
 
 .cardbox {
 	margin: 0px auto;
-	width: 100%;
+	width: auto;
 	padding: 15px;
 	background-color: rgba(255, 0, 0, 0.1);
 	border-radius: 10px;
@@ -41,15 +40,6 @@ body {
 
 .cardbox:nth-child(n + 2) {
 	margin-top: 20px;
-}
-
-.cardbox-hoverable {
-	margin: 0px auto;
-	width: 100%;
-	padding: 15px;
-	background-color: rgba(255, 0, 0, 0.1);
-	border-radius: 10px;
-	box-shadow: 0px 0px 10px 5px rgba(2, 0, 255, 0.3);
 }
 
 .cardbox-hoverable:hover {
