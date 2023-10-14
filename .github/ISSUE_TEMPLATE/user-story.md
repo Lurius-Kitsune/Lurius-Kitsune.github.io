@@ -2,7 +2,7 @@
 name: User story
 about: 'User story for template '
 title: "\U0001F4DD[US] :"
-labels: For a feature, User Story
+labels: [User Story]
 assignees: ''
 
 ---
