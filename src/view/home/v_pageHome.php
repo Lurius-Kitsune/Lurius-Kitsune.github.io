@@ -1,6 +1,5 @@
 <?php
 
-require_once __DIR__ . '/tools/autoload.php';
 ob_start();
 
 ?>
@@ -38,5 +37,4 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $headerContent = '<link href="/css/index.css" rel="stylesheet">';
-
-require(MODEL . '/default.php');
+require_once VIEW . '/v_default.php';

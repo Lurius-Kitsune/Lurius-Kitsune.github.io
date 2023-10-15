@@ -1,6 +1,6 @@
 <?php
 
-use tools\Pager;
+use Luriusfox\MyPackage\Tools\Pager;
 
 ?>
 
@@ -14,11 +14,10 @@ use tools\Pager;
                         Organisations", option "Solutions Logicielles et Applications
                         Métiers"';
     $studyDescription = ["Diplôme d'État de niveau Bac+2."];
-    $studyDescription[] .= "Obtention de connaissance général et approfondie en developpement informatique";
+    $studyDescription[] .= "Obtention de connaissance général et approfondie en developpement informatique.";
     $studyDescription[] .= "Consolidation sur le tronc commun des connaissances en réseaux et en systèmes.";
     $linkWebsite = "https://bts-sio.lyc-bonaparte.fr";
-    $pager = new Pager(__DIR__ . '/../../view/home/v_studyTab.php', get_defined_vars());
-    echo $pager->renderPage();
+    echo Pager::renderPage(VIEW . '/home/v_studyTab.php', get_defined_vars());
     ?>
 
     <?php
@@ -32,11 +31,10 @@ use tools\Pager;
     $studyDescription = ["Diplôme d'État de niveau Bac."];
     $studyDescription[] .= "Administration de serveur et de réseau informatique.";
     $studyDescription[] .= "Obtention de connaissances en réseaux.";
-    $studyDescription[] .= "Supervision et gestion de projet";
+    $studyDescription[] .= "Supervision et gestion de projet.";
     $studyDescription[] .= "Création Mini Eco-Entreprise en premiére année.";
     $linkWebsite = "https://lyceebranly.fr";
-    $pager = new Pager(__DIR__ . '/../../view/home/v_studyTab.php', get_defined_vars());
-    echo $pager->renderPage();
+    echo Pager::renderPage(VIEW . '/home/v_studyTab.php', get_defined_vars());
     ?>
 
     <?php
@@ -47,7 +45,6 @@ use tools\Pager;
     $studyState = '[Mention Assez Bien] Obtenu';
     $studyDescription = null;
     $linkWebsite = null;
-    $pager = new Pager(__DIR__ . '/../../view/home/v_studyTab.php', get_defined_vars());
-    echo $pager->renderPage();
+    echo Pager::renderPage(VIEW . '/home/v_studyTab.php', get_defined_vars());
     ?>
 </div>
