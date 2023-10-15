@@ -79,4 +79,4 @@
 <?php
 $content = ob_get_clean();
 $headerContent = '<link href="/css/realisations.css" rel="stylesheet">';
-require(__DIR__ . '/../../model/default.php');
+require(__DIR__ . '/../../src/view/v_default.php');

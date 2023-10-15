@@ -1,6 +1,7 @@
 <?php
 
-define('ROOT', __DIR__ . '/../../');
-define('VIEW', ROOT . '/view');
-define('CONTROLLER', ROOT . '/controller');
-define('MODEL', ROOT . '/model');
+define('ROOT', __DIR__ . '/../..');
+define('SRC_DIR', ROOT . '/src');
+define('VIEW', SRC_DIR . '/view');
+define('CONTROLLER', SRC_DIR . '/controller');
+define('MODEL', SRC_DIR . '/model');
