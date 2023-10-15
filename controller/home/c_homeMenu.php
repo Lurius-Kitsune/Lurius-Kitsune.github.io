@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../../tools/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 // Answer post request with html response (for ajax)
 if (isset($_POST['content'])) {

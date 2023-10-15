@@ -1,6 +1,6 @@
 <?php
 
-namespace tools;
+namespace Luriusfox\MyPackage\Tools;
 
 class Pager
 {

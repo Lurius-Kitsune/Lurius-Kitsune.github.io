@@ -1,6 +1,6 @@
 <?php
 
-use tools\Pager;
+use Luriusfox\MyPackage\Tools\Pager;
 
 ?>
 
