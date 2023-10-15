@@ -6,8 +6,7 @@ $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 if ($action == "homeController") {
     require_once CONTROLLER . '/home/c_homeMenu.php';
+} else {
+    require_once VIEW . '/home/v_pageHome.php';
+    require(VIEW . '/v_default.php');
 }
-
-$headerContent = '<link href="/css/index.css" rel="stylesheet">';
-
-require(VIEW . '/v_default.php');
