@@ -37,3 +37,4 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $headerContent = '<link href="/css/index.css" rel="stylesheet">';
+require_once VIEW . '/v_default.php';

@@ -8,5 +8,4 @@ if ($action == "homeController") {
     require_once CONTROLLER . '/home/c_homeMenu.php';
 } else {
     require_once VIEW . '/home/v_pageHome.php';
-    require(VIEW . '/v_default.php');
 }
