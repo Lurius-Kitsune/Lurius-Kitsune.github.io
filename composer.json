@@ -1,0 +1,15 @@
+{
+    "name": "luriusfox/tools",
+    "autoload": {
+        "psr-4": {
+            "Luriusfox\\MyPackage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lurius-Kitsune",
+            "email": "LucasFox@outlook.fr"
+        }
+    ],
+    "require": {}
+}
