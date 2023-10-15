@@ -1,6 +1,6 @@
 <?php
 
-use tools\Pager;
+use Luriusfox\MyPackage\Tools\Pager;
 
 ?>
 
@@ -19,8 +19,7 @@ use tools\Pager;
     $companyTask[] .= "Découverte du framework PHP Laravel et des methodes de développement avec pomodoro.";
 
     $rapportMany = true;
-    $pager = new Pager(__DIR__ . '/../../view/home/v_workExpTab.php', get_defined_vars());
-    echo $pager->renderPage();
+    echo Pager::renderPage(VIEW . '/home/v_workExpTab.php', get_defined_vars());
     ?>
 
     <?php
@@ -36,8 +35,7 @@ use tools\Pager;
     $companyTask[] .= "Découverte de python en autodidacte.";
 
     $rapportMany = null;
-    $pager = new Pager(__DIR__ . '/../../view/home/v_workExpTab.php', get_defined_vars());
-    echo $pager->renderPage();
+    echo Pager::renderPage(VIEW . '/home/v_workExpTab.php', get_defined_vars());
     ?>
 
     <?php
@@ -53,7 +51,6 @@ use tools\Pager;
     $companyTask[] .= "Déploiment de suite informatique à travers l'infratruture de l'entreprise.";
 
     $rapportMany = false;
-    $pager = new Pager(__DIR__ . '/../../view/home/v_workExpTab.php', get_defined_vars());
-    echo $pager->renderPage();
+    echo Pager::renderPage(VIEW . '/home/v_workExpTab.php', get_defined_vars());
     ?>
 </div>
