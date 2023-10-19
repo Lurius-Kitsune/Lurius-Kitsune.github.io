@@ -34,7 +34,8 @@ use Luriusfox\MyPackage\Tools\Pager;
             <div class="date"><?= $companyDuration; ?></div>
             <div><span class="badge text-bg-success mb-1"><?= $companyWorkType; ?></span></div>
         </div>
-        <hr class="d-lg-none d-block"></hr>
+        <hr class="d-lg-none d-block">
+        </hr>
         <div class="col-lg-8">
             <div class="profession"><?= $companyJob; ?></div>
             <div class="details">
@@ -64,4 +65,9 @@ use Luriusfox\MyPackage\Tools\Pager;
         </div>
     </div>
     <hr />
+    <?php
+    if (!$rapportMany) {
+        echo "<iframe src='/resources/pdf/$companyName.pdf' width='100%' style='height:50em'></iframe>";
+    }
+    ?>
 </div>
