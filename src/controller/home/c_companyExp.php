@@ -17,6 +17,7 @@ foreach ($table as $Tablekey => $value) {
     Pager::renderPage(VIEW . '/home/v_workExpTab.php', [
         'isNew' => $value['isNew'],
         'companyName' => $value['companyName'],
+        'companyLieu' => $value['lieu'],
         'companyDuration' => $value['duree'],
         'companyWorkType' => $value['workType'], // 'stage', 'alternance', 'CDI', 'CDD'
         'companyImage' => $value['imageLink'],

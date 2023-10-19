@@ -3,6 +3,7 @@
 /**
  * @var bool $isNew
  * @var string $companyName
+ * @var string $companyLieu
  * @var string $companyDuration
  * @var string $companyWorkType
  * @var string $companyImage
@@ -15,8 +16,9 @@
 <div id="work-experience-wrapper" class="experience clearfix cardbox" data-aos="flip-up" data-aos-easing="ease-out-cubic">
     <div class="row justify-content-end">
         <div class="col-lg-2">
-            <div class="lieu"><?= $companyName; ?>&nbsp;<?= $isNew ? '<span class="badge text-bg-info">New</span>' : null; ?>
+            <div class="companyName"><?= $companyName; ?>&nbsp;<?= $isNew ? '<span class="badge text-bg-info">New</span>' : null; ?>
             </div>
+            <div class="lieu"><?= $companyLieu; ?></div>
             <div class="date"><?= $companyDuration; ?></div>
             <div><span class="badge text-bg-success"><?= $companyWorkType; ?></span></div>
         </div>

@@ -71,7 +71,7 @@ class PdoPortfolio
 
     public function getCompanyInfo(string $companyName): array|bool
     {
-        $result = $this->connexion->prepare("SELECT * FROM companywork WHERE id = :companyName");
+        $result = $this->connexion->prepare("SELECT * FROM companywork WHERE companyName = :companyName");
         $result->bindParam(':companyName', $companyName, PDO::PARAM_STR);
         $result->execute();
         return $result->fetch(PDO::FETCH_ASSOC);

@@ -7,22 +7,25 @@ GRANT SELECT ON portfolio.* TO 'portfolioPdo'@'localhost';
 
 CREATE TABLE companywork (
   id            int NOT NULL AUTO_INCREMENT,
-  companyName   VARCHAR(50) NOT NULL,
+  companyName       VARCHAR(50) NOT NULL,
   workType          ENUM('Stage', 'Alternance', 'CDI', 'CDD') NOT NULL,
-  duree         VARCHAR(50) NOT NULL,
-  imageLink     VARCHAR(1000) NULL,
-  jobPost       VARCHAR(50) NOT NULL,
-  mainTask       VARCHAR(300) NOT NULL,
-  skill       VARCHAR(300) NULL,
-  hasManyReport BOOLEAN     NULL,
-  isNew        BOOLEAN     NOT NULL DEFAULT TRUE,
+  lieu              VARCHAR(50) NOT NULL,
+  duree             VARCHAR(50) NOT NULL,
+  imageLink         VARCHAR(1000) NULL,
+  jobPost           VARCHAR(50) NOT NULL,
+  mainTask          VARCHAR(300) NOT NULL,
+  subTask           VARCHAR(300) NULL,
+  skill             VARCHAR(300) NULL,
+  hasManyReport     BOOLEAN     NULL,
+  isNew             BOOLEAN     NOT NULL DEFAULT TRUE,
 
   CONSTRAINT PK_COMPANYWORK PRIMARY KEY (id)
 );
 
-INSERT INTO companywork (companyName, duree, workType, imageLink, jobPost, mainTask, skill, hasManyReport, isNew) VALUES
+INSERT INTO companywork (companyName, lieu, duree, workType, imageLink, jobPost, mainTask, subTask, skill, hasManyReport, isNew) VALUES
 ('Progial', 
-'2021 (6 sem.)', 
+'Poitiers',
+'2021 (6 sem.)',
 'Stage',
 'https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/7e/8d/47/7e8d4748-511c-fbbf-8984-d53c362c97b1/source/512x512bb.jpg', 
 'Administrateur réseaux', 
@@ -30,9 +33,11 @@ INSERT INTO companywork (companyName, duree, workType, imageLink, jobPost, mainT
 Installation d\'un cluster DHCP.;
 Déploiment de suite informatique à travers l\'infratruture de l\'entreprise.', 
 null,
+null,
 false,
 false),
 ('Linexos',
+'Chasseneuil-du-Poitou',
 '2021 (6 sem.)',
 'Stage',
 'https://ccibusiness.fr/sites/default/files/styles/photo_company_220_220/public/2021-07/Stickers.png?itok=VL_KVMO6',
@@ -42,8 +47,10 @@ Travaille sur un début de projet d’un client de l’entreprise.;
 Découverte de python en autodidacte.',
 null,
 null,
+null,
 false),
 ('Evoliz',
+'La Garde',
 '2023 (8 sem.)',
 'Stage',
 'https://lamacompta.co/wp-content/uploads/2021/12/Evoliz-logo.png',
@@ -55,5 +62,6 @@ Maintenance et correction de bug sur la solution Evoliz.',
 'Utilisation de Git Flow.;
 Développement en Mob Programming.;
 Veille Informatique avec l\'équipe de développeur.',
+'PHP;JS;HTML;CSS;SQL;Git;Git Flow;Methodes SCRUM',
 true,
 true);

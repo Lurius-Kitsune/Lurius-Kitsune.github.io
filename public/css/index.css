@@ -141,11 +141,11 @@
 /******************************************
 * Expériences professionnelles
 ******************************************/
-.experience .lieu {
+.experience .companyName {
 	font-size: 1.1em;
 	font-weight: bold;
 }
-.experience .date {
+.experience .date, .experience .lieu {
 	font-size: 1em;
 	opacity: 0.7;
 }
