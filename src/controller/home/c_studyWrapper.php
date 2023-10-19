@@ -2,6 +2,11 @@
 
 use Luriusfox\MyPackage\Tools\Pager;
 
+?>
+
+<div id="home-study-content">
+    
+<?php
 // BTS SIO
 $studyTable = [];
 $studyTable['btssio'] = [
@@ -52,3 +57,5 @@ foreach ($studyTable as $studyKey => $studyValue) {
         'linkWebsite' => $studyValue['linkWebsite']
     ]);
 }
+?>
+</div>

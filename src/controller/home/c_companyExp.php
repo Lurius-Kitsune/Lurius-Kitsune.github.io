@@ -2,6 +2,11 @@
 
 use Luriusfox\MyPackage\Tools\Pager;
 
+?>
+
+<div class="rubrique clearfix" id="home-company-content">
+
+<?php
 $table = [];
 
 // Evoliz company
