@@ -1,7 +1,7 @@
 {
     "name": "luriusfox/tools",
     "autoload": {
-        "files": [ "src/tools/constants.php" ],
+        "files": [ "src/tools/define.php" ],
         "psr-4": {
             "Luriusfox\\MyPackage\\": "src/"
         }
