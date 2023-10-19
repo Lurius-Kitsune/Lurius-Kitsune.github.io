@@ -15,6 +15,13 @@
 ?>
 
 <div id="work-experience-wrapper" class="experience clearfix ">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Acceuil</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><?= $companyName; ?></li>
+        </ol>
+    </nav>
+    <hr />
     <div class="row justify-content-end">
         <div class="col-lg-2">
             <img src="<?= $companyImage; ?>" style="width: 100px;" class="card-img-top" alt="Photo de l'entreprise <?= $companyName; ?>">
