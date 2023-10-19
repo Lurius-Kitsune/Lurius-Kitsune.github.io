@@ -23,6 +23,7 @@ foreach ($table as $Tablekey => $value) {
         'companyImage' => $value['imageLink'],
         'companyJob' => $value['jobPost'],
         'companyTask' => explode(';', $value['mainTask']),
+        'companySkill' => explode(';', $value['skill']),
         'rapportMany' => $value['hasManyReport']
     ]);
 }
