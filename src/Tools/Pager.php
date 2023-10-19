@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Luriusfox\MyPackage\Tools;
 
 class Pager
@@ -17,7 +19,17 @@ class Pager
             // include the page
             include $page;
             // return the page
+            echo ob_get_clean();
+        }
+    }
+
+    public static function getIncludeContents($filename): string
+    {
+        if (is_file($filename)) {
+            ob_start();
+            include $filename;
             return ob_get_clean();
         }
+        return false;
     }
 }

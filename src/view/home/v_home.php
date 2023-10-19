@@ -1,8 +1,3 @@
-<?php
-
-ob_start();
-
-?>
 <script src="/js/home.js" crossorigin="anonymous"></script>
 <div class="p-lg-5 bg-body-tertiary img-1">
     <div class="box-lg rounded-top border-sm border-red bg-white">
@@ -33,8 +28,3 @@ ob_start();
         </div>
     </div>
 </div>
-
-<?php
-$content = ob_get_clean();
-$headerContent = '<link href="/css/index.css" rel="stylesheet">';
-require_once VIEW . '/v_default.php';

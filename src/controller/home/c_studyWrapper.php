@@ -17,7 +17,7 @@ use Luriusfox\MyPackage\Tools\Pager;
     $studyDescription[] .= "Obtention de connaissance général et approfondie en developpement informatique.";
     $studyDescription[] .= "Consolidation sur le tronc commun des connaissances en réseaux et en systèmes.";
     $linkWebsite = "https://bts-sio.lyc-bonaparte.fr";
-    echo Pager::renderPage(VIEW . '/home/v_studyTab.php', get_defined_vars());
+    Pager::renderPage(VIEW . '/home/v_studyTab.php', get_defined_vars());
     ?>
 
     <?php
@@ -34,7 +34,7 @@ use Luriusfox\MyPackage\Tools\Pager;
     $studyDescription[] .= "Supervision et gestion de projet.";
     $studyDescription[] .= "Création Mini Eco-Entreprise en premiére année.";
     $linkWebsite = "https://lyceebranly.fr";
-    echo Pager::renderPage(VIEW . '/home/v_studyTab.php', get_defined_vars());
+    Pager::renderPage(VIEW . '/home/v_studyTab.php', get_defined_vars());
     ?>
 
     <?php
@@ -45,6 +45,6 @@ use Luriusfox\MyPackage\Tools\Pager;
     $studyState = '[Mention Assez Bien] Obtenu';
     $studyDescription = null;
     $linkWebsite = null;
-    echo Pager::renderPage(VIEW . '/home/v_studyTab.php', get_defined_vars());
+    Pager::renderPage(VIEW . '/home/v_studyTab.php', get_defined_vars());
     ?>
 </div>
