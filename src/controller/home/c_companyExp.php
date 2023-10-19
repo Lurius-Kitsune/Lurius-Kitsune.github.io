@@ -13,16 +13,15 @@ use Luriusfox\MyPackage\Tools\Pager;
 
 <?php
 $table = $pdo->getAllCompanyInfo();
-
 foreach ($table as $Tablekey => $value) {
     Pager::renderPage(VIEW . '/home/v_workExpTab.php', [
         'isNew' => $value['isNew'],
-        'companyName' => $Tablekey,
-        'companyDuration' => $value['duration'],
-        'companyImage' => $value['image'],
-        'companyJob' => $value['job'],
-        'companyTask' => $value['task'],
-        'rapportMany' => $value['rapportMany']
+        'companyName' => $value['companyName'],
+        'companyDuration' => $value['duree'],
+        'companyImage' => $value['imageLink'],
+        'companyJob' => $value['jobPost'],
+        'companyTask' => explode(';', $value['mainTask']),
+        'rapportMany' => $value['hasManyReport']
     ]);
 }
 ?>

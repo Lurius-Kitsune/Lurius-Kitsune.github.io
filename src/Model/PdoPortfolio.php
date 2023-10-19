@@ -23,7 +23,7 @@ namespace Luriusfox\MyPackage\Model;
 
 use PDO;
 
-require '../config/bdd.php';
+require_once '../config/bdd.php';
 
 class PdoPortfolio
 {
@@ -65,13 +65,13 @@ class PdoPortfolio
 
     public function getAllCompanyInfo(): array
     {
-        $result = $this->connexion->query("SELECT * FROM company");
+        $result = $this->connexion->query("SELECT * FROM companywork order by id desc");
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getCompanyInfo(string $companyName): array|bool
     {
-        $result = $this->connexion->prepare("SELECT * FROM company WHERE id = :companyName");
+        $result = $this->connexion->prepare("SELECT * FROM companywork WHERE id = :companyName");
         $result->bindParam(':companyName', $companyName, PDO::PARAM_STR);
         $result->execute();
         return $result->fetch(PDO::FETCH_ASSOC);

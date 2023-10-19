@@ -19,7 +19,7 @@
             <div class="date"><?= $companyDuration; ?></div>
         </div>
         <div class="col-lg-2">
-            <img src="<?= $companyImage[0]; ?>" style="width: 100px;" class="card-img-top" alt="<?= $companyImage[1]; ?>">
+            <img src="<?= $companyImage; ?>" style="width: 100px;" class="card-img-top" alt="Photo de l'entreprise <?= $companyName; ?>">
         </div>
         <div class="col-lg-8">
             <div class="profession"><?= $companyJob; ?></div>
