@@ -2,8 +2,9 @@
 
 // Answer post request with html response (for ajax)
 if (isset($_POST['content'])) {
+    $contentAsk = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_SPECIAL_CHARS);
     //switch case for ajax request
-    switch ($_POST['content']) {
+    switch ($contentAsk) {
         case 'home-company':
             include_once CONTROLLER . '/home/c_companyExp.php';
             exit();
