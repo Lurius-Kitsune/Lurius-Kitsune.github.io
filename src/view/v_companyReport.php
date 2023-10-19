@@ -12,6 +12,9 @@
  * @var array $companySkill
  * @var bool $rapportMany
  */
+
+use Luriusfox\MyPackage\Tools\Pager;
+
 ?>
 
 <div id="work-experience-wrapper" class="experience clearfix ">
@@ -23,14 +26,15 @@
     </nav>
     <hr />
     <div class="row justify-content-end">
-        <div class="col-lg-2">
-            <img src="<?= $companyImage; ?>" style="width: 100px;" class="card-img-top" alt="Photo de l'entreprise <?= $companyName; ?>">
+        <div class="col-sm-3 col-lg-2">
+            <img src="<?= $companyImage; ?>" style="width: 100%;" class="card-img-top" alt="Photo de l'entreprise <?= $companyName; ?>">
         </div>
-        <div class="col-lg-2">
+        <div class="col-sm-9 col-lg-2">
             <div class="lieu"><?= $companyLieu; ?></div>
             <div class="date"><?= $companyDuration; ?></div>
-            <div><span class="badge text-bg-success"><?= $companyWorkType; ?></span></div>
+            <div><span class="badge text-bg-success mb-1"><?= $companyWorkType; ?></span></div>
         </div>
+        <hr class="d-lg-none d-block"></hr>
         <div class="col-lg-8">
             <div class="profession"><?= $companyJob; ?></div>
             <div class="details">
@@ -53,9 +57,9 @@
             <?php endif; ?>
             <div class="details">
                 <p class="mb-0">Compétences travailler :</p>
-                <?php foreach ($companySkill as $skill) : ?>
-                    <span class="badge text-bg-info"><?= $skill; ?></span>
-                <?php endforeach; ?>
+                <?php Pager::renderPage(VIEW . '/utils/v_listBadge.php', [
+                    'companySkill' => $companySkill
+                ]); ?>
             </div>
         </div>
     </div>
