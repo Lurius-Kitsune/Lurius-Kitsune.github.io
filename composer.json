@@ -2,7 +2,7 @@
     "name": "luriusfox/tools",
     "autoload": {
         "files": [ 
-            "src/tools/define.php",
+            "config/define.php",
             "config/bdd.php"
         ],
         "psr-4": {
