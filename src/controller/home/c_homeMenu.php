@@ -1,8 +1,8 @@
 <?php
 
 // Answer post request with html response (for ajax)
-if (isset($_POST['content'])) {
-    $contentAsk = filter_input(INPUT_POST, 'content', FILTER_SANITIZE_SPECIAL_CHARS);
+if (isset($_GET['content'])) {
+    $contentAsk = filter_input(INPUT_GET, 'content', FILTER_SANITIZE_SPECIAL_CHARS);
     //switch case for ajax request
     switch ($contentAsk) {
         case 'home-company':

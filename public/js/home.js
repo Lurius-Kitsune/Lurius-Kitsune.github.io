@@ -19,7 +19,7 @@ $(window).on("load", function () {
             //request content from server and parse it to html
             $.ajax({
                 url: "/",
-                type: "POST",
+                type: "GET",
                 data: { "action" : "homeController", "content": clickedButtonId },
                 success: function (data) {
                     $(data).appendTo("#home-content-wrapper");
