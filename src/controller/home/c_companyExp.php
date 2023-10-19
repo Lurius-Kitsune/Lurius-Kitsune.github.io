@@ -18,6 +18,7 @@ foreach ($table as $Tablekey => $value) {
         'isNew' => $value['isNew'],
         'companyName' => $value['companyName'],
         'companyDuration' => $value['duree'],
+        'companyWorkType' => $value['workType'], // 'stage', 'alternance', 'CDI', 'CDD'
         'companyImage' => $value['imageLink'],
         'companyJob' => $value['jobPost'],
         'companyTask' => explode(';', $value['mainTask']),

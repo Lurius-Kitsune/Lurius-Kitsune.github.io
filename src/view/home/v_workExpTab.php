@@ -4,7 +4,8 @@
  * @var bool $isNew
  * @var string $companyName
  * @var string $companyDuration
- * @var array $companyImage
+ * @var string $companyWorkType
+ * @var string $companyImage
  * @var string $companyJob
  * @var array $companyTask
  * @var bool $rapportMany
@@ -17,6 +18,7 @@
             <div class="lieu"><?= $companyName; ?>&nbsp;<?= $isNew ? '<span class="badge text-bg-info">New</span>' : null; ?>
             </div>
             <div class="date"><?= $companyDuration; ?></div>
+            <div><span class="badge text-bg-success"><?= $companyWorkType; ?></span></div>
         </div>
         <div class="col-lg-2">
             <img src="<?= $companyImage; ?>" style="width: 100px;" class="card-img-top" alt="Photo de l'entreprise <?= $companyName; ?>">

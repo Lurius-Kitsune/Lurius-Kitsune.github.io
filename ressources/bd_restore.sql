@@ -8,6 +8,7 @@ GRANT SELECT ON portfolio.* TO 'portfolioPdo'@'localhost';
 CREATE TABLE companywork (
   id            int NOT NULL AUTO_INCREMENT,
   companyName   VARCHAR(50) NOT NULL,
+  workType          ENUM('Stage', 'Alternance', 'CDI', 'CDD') NOT NULL,
   duree         VARCHAR(50) NOT NULL,
   imageLink     VARCHAR(1000) NULL,
   jobPost       VARCHAR(50) NOT NULL,
@@ -19,9 +20,10 @@ CREATE TABLE companywork (
   CONSTRAINT PK_COMPANYWORK PRIMARY KEY (id)
 );
 
-INSERT INTO companywork (companyName, duree, imageLink, jobPost, mainTask, skill, hasManyReport, isNew) VALUES
+INSERT INTO companywork (companyName, duree, workType, imageLink, jobPost, mainTask, skill, hasManyReport, isNew) VALUES
 ('Progial', 
 '2021 (6 sem.)', 
+'Stage',
 'https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/7e/8d/47/7e8d4748-511c-fbbf-8984-d53c362c97b1/source/512x512bb.jpg', 
 'Administrateur réseaux', 
 'Supervision & Maintenance de serveur à distance.;
@@ -32,6 +34,7 @@ false,
 false),
 ('Linexos',
 '2021 (6 sem.)',
+'Stage',
 'https://ccibusiness.fr/sites/default/files/styles/photo_company_220_220/public/2021-07/Stickers.png?itok=VL_KVMO6',
 'Développeur Python',
 'Développement d’une API ainsi qu’une REST API en Python.;
@@ -42,6 +45,7 @@ null,
 false),
 ('Evoliz',
 '2023 (8 sem.)',
+'Stage',
 'https://lamacompta.co/wp-content/uploads/2021/12/Evoliz-logo.png',
 'Développeur Web',
 'Développement PHP-JS-HTML-CSS sur la solution.;
