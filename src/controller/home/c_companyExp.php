@@ -2,55 +2,60 @@
 
 use Luriusfox\MyPackage\Tools\Pager;
 
+$table = [];
+
+// Evoliz company
+$table['Evoliz'] = [
+    'isNew' => true, // true = 'Nouvelle entreprise', false = 'Ancienne entreprise
+    'duration' => '2023 (8 sem.)',
+    'image' => ['https://lamacompta.co/wp-content/uploads/2021/12/Evoliz-logo.png', 'Logo de l\'entreprise Evoliz'],
+    'job' => 'Developpeur Web',
+    'task' => [
+        'Ajout et amélioration de fonctionnalité de la solution Evoliz.',
+        'Maintenance et correction de la solution Evoliz.',
+        'Découverte du framework PHP Laravel et des methodes de développement avec pomodoro.'
+    ],
+    'rapportMany' => true
+];
+
+// Linexos company
+$table['Linexos'] = [
+    'isNew' => false,
+    'duration' => '2021 (6 sem.)',
+    'image' => ['https://ccibusiness.fr/sites/default/files/styles/photo_company_220_220/public/2021-07/Stickers.png?itok=VL_KVMO6', 'Logo de l\'entreprise Linexos'],
+    'job' => 'Developpement Python',
+    'task' => [
+        'Développement d’une API ainsi qu’une REST API en Python.',
+        'Travaille sur un début de projet d’un client de l’entreprise.',
+        'Découverte de python en autodidacte.'
+    ],
+    'rapportMany' => null
+];
+
+// Progial company
+$table['Progial'] = [
+    'isNew' => false,
+    'duration' => '2021 (6 sem.)',
+    'image' => ['https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/7e/8d/47/7e8d4748-511c-fbbf-8984-d53c362c97b1/source/512x512bb.jpg', 'Logo de l\'entreprise Progial'],
+    'job' => 'Administrateur réseaux',
+    'task' => [
+        'Supervision & Maintenance de serveur à distance.',
+        'Installation d\'un cluster DHCP.',
+        'Déploiment de suite informatique à travers l\'infratruture de l\'entreprise.'
+    ],
+    'rapportMany' => false
+];
+
+foreach ($table as $Tablekey => $value) {
+    Pager::renderPage(VIEW . '/home/v_workExpTab.php', [
+        'isNew' => $value['isNew'],
+        'companyName' => $Tablekey,
+        'companyDuration' => $value['duration'],
+        'companyImage' => $value['image'],
+        'companyJob' => $value['job'],
+        'companyTask' => $value['task'],
+        'rapportMany' => $value['rapportMany']
+    ]);
+}
 ?>
-
-<div class="rubrique clearfix" id="home-company-content">
-
-    <?php
-    // Evoliz company
-    $isNew = true;
-    $companyName = "Evoliz";
-    $companyDuration = "2023 (8 sem.)";
-    $companyImage = ["https://lamacompta.co/wp-content/uploads/2021/12/Evoliz-logo.png", "Logo de l'entreprise Evoliz"];
-    $companyJob = "Developpeur Web";
-
-    $companyTask = ["Ajout et amélioration de fonctionnalité de la solution Evoliz."];
-    $companyTask[] .= "Maintenance et correction de la solution Evoliz.";
-    $companyTask[] .= "Découverte du framework PHP Laravel et des methodes de développement avec pomodoro.";
-
-    $rapportMany = true;
-    Pager::renderPage(VIEW . '/home/v_workExpTab.php', get_defined_vars());
-    ?>
-
-    <?php
-    // Linexos company
-    $isNew = false;
-    $companyName = "Linexos";
-    $companyDuration = "2021 (6 sem.)";
-    $companyImage = ["https://ccibusiness.fr/sites/default/files/styles/photo_company_220_220/public/2021-07/Stickers.png?itok=VL_KVMO6", "Logo de l'entreprise Linexos"];
-    $companyJob = "Developpement Python";
-
-    $companyTask = ["Développement d’une API ainsi qu’une REST API en Python."];
-    $companyTask[] .= "Travaille sur un début de projet d’un client de l’entreprise.";
-    $companyTask[] .= "Découverte de python en autodidacte.";
-
-    $rapportMany = null;
-    Pager::renderPage(VIEW . '/home/v_workExpTab.php', get_defined_vars());
-    ?>
-
-    <?php
-    // Progial company
-    $isNew = false;
-    $companyName = "Progial";
-    $companyDuration = "2021 (6 sem.)";
-    $companyImage = ["https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/7e/8d/47/7e8d4748-511c-fbbf-8984-d53c362c97b1/source/512x512bb.jpg", "Logo de l'entreprise Progial"];
-    $companyJob = "Administrateur réseaux";
-
-    $companyTask = ["Supervision & Maintenance de serveur à distance."];
-    $companyTask[] .= "Installation d'un cluster DHCP.";
-    $companyTask[] .= "Déploiment de suite informatique à travers l'infratruture de l'entreprise.";
-
-    $rapportMany = false;
-    Pager::renderPage(VIEW . '/home/v_workExpTab.php', get_defined_vars());
-    ?>
 </div>
