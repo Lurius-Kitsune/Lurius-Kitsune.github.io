@@ -9,7 +9,7 @@
  * @var string $companyImage
  * @var string $companyJob
  * @var array $companyTask
- * @var bool $rapportMany
+ * @var ?bool $rapportMany
  */
 ?>
 

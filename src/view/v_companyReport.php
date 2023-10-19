@@ -8,7 +8,7 @@
  * @var string $companyImage
  * @var string $companyJob
  * @var array $companyMainTask
- * @var array $companySubTask
+ * @var ?array $companySubTask
  * @var array $companySkill
  * @var bool $rapportMany
  */
@@ -34,14 +34,16 @@
                     <?php endforeach; ?>
                 </ul>
             </div>
-            <div class="details">
-                <p class="mb-0">Extras :</p>
-                <ul>
-                    <?php foreach ($companySubTask as $task) : ?>
-                        <li><?= $task; ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
+            <?php if (!is_null($companySubTask)) : ?>
+                <div class="details">
+                    <p class="mb-0">Extras :</p>
+                    <ul>
+                        <?php foreach ($companySubTask as $task) : ?>
+                            <li><?= $task; ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
             <div class="details">
                 <p class="mb-0">Compétences travailler :</p>
                 <?php foreach ($companySkill as $skill) : ?>

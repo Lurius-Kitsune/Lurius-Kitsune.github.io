@@ -18,7 +18,7 @@ Pager::renderPage(VIEW . '/v_companyReport.php', [
     'companyImage' => $company['imageLink'],
     'companyJob' => $company['jobPost'],
     'companyMainTask' => explode(';', $company['mainTask']),
-    'companySubTask' => explode(';', $company['subTask']),
+    'companySubTask' => is_null($company['subTask']) ? null : explode(';', $company['subTask']),
     'companySkill' => explode(';', $company['skill']),
     'rapportMany' => $company['hasManyReport']
 ]);
