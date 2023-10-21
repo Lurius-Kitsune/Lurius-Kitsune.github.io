@@ -67,7 +67,7 @@ use Luriusfox\MyPackage\Tools\Pager;
     <hr />
     <?php
     if (!$rapportMany) {
-        echo "<iframe src='/resources/pdf/$companyName.pdf' width='100%' style='height:50em'></iframe>";
+        echo "<iframe src='/resources/pdf/$companyName.pdf' width='100%' style='height:75em'></iframe>";
     }
     ?>
 </div>
