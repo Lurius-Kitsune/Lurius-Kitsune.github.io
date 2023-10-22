@@ -73,14 +73,15 @@ CREATE TABLE IF NOT EXISTS skillTab (
     id      ENUM('art', 'network', 'prog', 'other') NOT NULL,
     name    VARCHAR(50) NOT NULL,
     tabIcon VARCHAR(50) NOT NULL,
+    logiciel VARCHAR(200) NULL,
     CONSTRAINT PK_SKILLTAB PRIMARY KEY (id)
-)
+);
 
-INSERT INTO skillTab (id, name, tabIcon) VALUES 
-('art', 'Artistique', 'swatchbook'),
-('network', 'Infrastrucutre réseau & web', 'globe'),
-('prog', 'Programmation', 'computer'),
-('other', 'Non classé', 'file-circle-question');
+INSERT INTO skillTab (id, name, tabIcon, logiciel) VALUES 
+('art', 'Artistique', 'swatchbook', NULL),
+('network', 'Infrastrucutre réseau & web', 'globe', NULL),
+('prog', 'Programmation', 'computer', 'Vscode;Netbeans;Github'),
+('other', 'Non classé', 'file-circle-question', NULL);
 
 CREATE TABLE IF NOT EXISTS skill (
   id            int NOT NULL AUTO_INCREMENT,

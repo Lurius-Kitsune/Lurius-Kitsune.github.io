@@ -79,7 +79,7 @@ class PdoPortfolio
 
     public function getSkillsInfoFromTab(string $skillType): array|bool
     {
-        $result = $this->connexion->prepare("SELECT skillTab.tabIcon, skillTab.name, skill.skillName, skill.skillLevel FROM skill 
+        $result = $this->connexion->prepare("SELECT skillTab.tabIcon, skillTab.name, skilltab.logiciel, skill.skillName, skill.skillLevel FROM skill 
             INNER JOIN skillTab ON skill.skillType = skillTab.id WHERE skillTab.id = :skillType");
         $result->bindParam(':skillType', $skillType, PDO::PARAM_STR);
         $result->execute();

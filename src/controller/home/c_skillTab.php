@@ -22,6 +22,7 @@ if (!is_array($skillInfo)) {
     Pager::renderPage(VIEW . '/home/v_skill.php', [
         'skillTabIcon' => $skillInfo[0]['tabIcon'],
         'skillTabName' => $skillInfo[0]['name'],
+        'toolsUsed' => explode(';', $skillInfo[0]['logiciel']),
         'skills' => $skillInfo,
     ]);
 }
