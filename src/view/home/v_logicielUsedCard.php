@@ -7,7 +7,7 @@
 ?>
 
 <div class="col-sm-4">
-    <div class="card mb-1">
+    <div class="card mb-1" data-aos-easing="ease-out-cubic" data-aos="fade-up">
         <div class="skill-img">
             <img src="/images/logiciel/<?= $logicielName ?>.png" class="card-img-top" alt="<?= $logicielName ?>">
         </div>

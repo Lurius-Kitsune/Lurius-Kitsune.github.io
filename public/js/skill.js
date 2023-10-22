@@ -34,8 +34,12 @@ $ButtonReport.on("click", function () {
 				//console.error("Erreur dans le chargement du contenu de la page")
 				$(data.responseText).prependTo("#home-skill-content");
 			},
+            complete: function () {
+                AOS.init();
+            }
 		});
 	}
+    AOS.init();
 });
 
 /**

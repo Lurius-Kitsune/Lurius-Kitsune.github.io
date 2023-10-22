@@ -9,7 +9,7 @@ $imagePath = '/images/skill/' . ($skillName === 'C#' ? 'Csharp' : $skillName) . 
 ?>
 
 <div class="col-sm-6">
-    <div class="card pb-3 mb-1">
+    <div class="card pb-3 mb-1" data-aos-easing="ease-out-cubic" data-aos="fade-up" >
         <?php if (file_exists(PUBLIC_PATH . $imagePath)) : ?>
             <div class="skill-img">
                 <img src="<?= $imagePath; ?>" class="card-img-top" alt="<?= $skillName ?>">
