@@ -17,7 +17,7 @@ use Luriusfox\MyPackage\Tools\Pager;
     <div class="container-fluid row" style="margin-right: 0px !important; margin-left: 0px !important;">
         <?php
         foreach ($skills as $skill) {
-            Pager::renderPage(VIEW . '/home/v_skillTag.php', [
+            Pager::renderPage(VIEW . '/home/skill/v_skillTag.php', [
                 'skillName' => $skill['skillName'],
                 'skillLevel' => $skill['skillLevel']
             ]);

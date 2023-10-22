@@ -7,10 +7,10 @@
 use Luriusfox\MyPackage\Model\PdoPortfolio;
 use Luriusfox\MyPackage\Tools\Pager;
 
-$page = VIEW . '/home/v_skill.php';
+$page = VIEW . '/home/skill/v_skill.php';
 if (!empty($_GET['skillTab'])) {
     $skillTab = filter_input(INPUT_GET, 'skillTab', FILTER_SANITIZE_SPECIAL_CHARS);
-    $page = VIEW . '/home/v_skillTabWrapper.php';
+    $page = VIEW . '/home/skill/v_skillTabWrapper.php';
 } else {
     $skillTab = 'prog';
 }

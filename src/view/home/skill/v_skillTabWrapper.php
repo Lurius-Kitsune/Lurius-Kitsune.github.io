@@ -22,7 +22,7 @@ $skillTabId = $skillTab['id'];
             <?php
             if (!is_null($toolsUsed)) {
                 foreach ($toolsUsed as $logicielName) {
-                    require VIEW . '/home/v_logicielUsedCard.php';
+                    require VIEW . '/home/skill/v_logicielUsedCard.php';
                 }
             } else {
                 echo '<div class="alert alert-info" role="alert">
@@ -35,7 +35,7 @@ $skillTabId = $skillTab['id'];
     <div class="col-lg-6">
         <?php
         if (!is_null($skillTab['skillName'])) {
-            require_once VIEW . '/home/v_skillTab.php';
+            require_once VIEW . '/home/skill/v_skillTab.php';
         } else {
             echo '<div class="alert alert-info" role="alert">
                     Aucune compétence pour cette catégorie !

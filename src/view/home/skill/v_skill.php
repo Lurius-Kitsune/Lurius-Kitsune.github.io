@@ -16,7 +16,7 @@ $skillTabId = $skillTab['id'];
 ?>
 <script src="/js/skill.js"></script>
 <div id="home-skill-content" class="rubrique clearfix">
-    <?php require_once VIEW . '/home/v_skillTabWrapper.php' ?>
+    <?php require_once VIEW . '/home/skill/v_skillTabWrapper.php' ?>
     <nav aria-label="Page navigation example" class="mt-5 d-flex justify-content-center">
         <ul class="pagination" id='skillTabMenu'>
             <?php
