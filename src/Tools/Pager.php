@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace Luriusfox\MyPackage\Tools;
 
+use Luriusfox\MyPackage\Model\PdoPortfolio;
+
+/**
+ * @var PdoPortfolio $pdo
+**/
+
 class Pager
 {
     // return the html page
@@ -23,7 +29,7 @@ class Pager
         }
     }
 
-    public static function getIncludeContents($filename): string
+    public static function getIncludeContents(string $filename, ?PdoPortfolio $pdo = null): string
     {
         if (is_file($filename)) {
             ob_start();

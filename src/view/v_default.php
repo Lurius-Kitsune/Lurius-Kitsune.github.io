@@ -23,7 +23,11 @@ require_once __DIR__ . '/../../vendor/autoload.php';
         <div class="row justify-content-end">
             <div class="col-lg-10 nopadding img-1" id="content">
                 <?php require(VIEW . '/v_owner.html'); ?>
-                <?= $content; ?>
+                <div class="p-lg-5 bg-body-tertiary img-1">
+                    <div class="box-lg rounded-top border-sm border-red bg-white">
+                        <?= $content; ?>
+                    </div>
+                </div>
             </div>
         </div>
 
