@@ -17,12 +17,12 @@ CREATE TABLE companywork (
   subTask           VARCHAR(300) NULL,
   skill             VARCHAR(300) NOT NULL,
   hasManyReport     BOOLEAN     NULL,
+  nbReport          INT         NULL,
   isNew             BOOLEAN     NOT NULL DEFAULT TRUE,
-
   CONSTRAINT PK_COMPANYWORK PRIMARY KEY (id)
 );
 
-INSERT INTO companywork (companyName, lieu, duree, workType, imageLink, jobPost, mainTask, subTask, skill, hasManyReport, isNew) VALUES
+INSERT INTO companywork (companyName, lieu, duree, workType, imageLink, jobPost, mainTask, subTask, skill, hasManyReport, nbReport, isNew) VALUES
 ('Progial', 
 'Poitiers',
 '2021 (6 sem.)',
@@ -35,6 +35,7 @@ Déploiment de suite informatique à travers l\'infratruture de l\'entreprise.',
 null,
 'Bash;Linux',
 false,
+1,
 false),
 ('Linexos',
 'Chasseneuil-du-Poitou',
@@ -48,6 +49,7 @@ Découverte de python en autodidacte.',
 null,
 'Python;Git',
 null,
+1,
 false),
 ('Evoliz',
 'La Garde',
@@ -64,4 +66,5 @@ Développement en Mob Programming.;
 Veille Informatique avec l\'équipe de développeur.',
 'PHP;JS;HTML;CSS;SQL;Git;Git Flow;Methodes SCRUM',
 true,
+8,
 true);
