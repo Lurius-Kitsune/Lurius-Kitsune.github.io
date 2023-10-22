@@ -15,7 +15,7 @@ $skillTabId = $skillTab['id'];
 
 ?>
 
-<div class="row align-items-center justify-content-end" id="skillTab-wrapper">
+<div class="row align-items-center justify-content-end" id="skillTab-wrapper-<?= $skillTabId; ?>">
     <div class="col-lg-6">
         <div class="container-fluid row justify-content-center" style="margin-right: 0px !important; margin-left: 0px !important;">
             <h3 class="textTab"> Mes outils / logiciel utilisé⚙️ </h3>
@@ -34,7 +34,13 @@ $skillTabId = $skillTab['id'];
     </div>
     <div class="col-lg-6">
         <?php
-        require_once VIEW . '/home/v_skillTab.php';
+        if (!is_null($skillTab['skillName'])) {
+            require_once VIEW . '/home/v_skillTab.php';
+        } else {
+            echo '<div class="alert alert-info" role="alert">
+                    Aucune compétence pour cette catégorie !
+                </div>';
+        }
         ?>
     </div>
 </div>
