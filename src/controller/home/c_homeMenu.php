@@ -12,7 +12,7 @@ if (isset($_GET['content'])) {
             require_once CONTROLLER . '/home/c_studyWrapper.php';
             exit();
         case 'home-skill':
-            require_once VIEW . '/home/v_skill.php';
+            require_once CONTROLLER . '/home/c_skillTab.php';
             exit();
         default:
             //trow 404 error

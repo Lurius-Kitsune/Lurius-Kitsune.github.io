@@ -76,4 +76,19 @@ class PdoPortfolio
         $result->execute();
         return $result->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function getSkillsInfoFromTab(string $skillType): array|bool
+    {
+        $result = $this->connexion->prepare("SELECT skillTab.*, skill.skillName, skill.skillLevel FROM skill 
+            RIGHT JOIN skillTab ON skill.skillType = skillTab.id WHERE skillTab.id = :skillType");
+        $result->bindParam(':skillType', $skillType, PDO::PARAM_STR);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getSkillsTabList(): array|bool
+    {
+        $result = $this->connexion->query("SELECT skillTab.id, skillTab.name FROM skillTab");
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

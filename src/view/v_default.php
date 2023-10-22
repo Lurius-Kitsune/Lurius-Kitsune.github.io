@@ -1,6 +1,8 @@
 <?php
-
-require_once __DIR__ . '/../../vendor/autoload.php';
+/**
+ * @var string $headerContent
+ * @var string $content
+ */
 ?>
 <!doctype html>
 <html lang="fr">

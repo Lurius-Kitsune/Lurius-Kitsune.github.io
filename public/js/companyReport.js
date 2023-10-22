@@ -26,9 +26,6 @@ $(window).on("load", function () {
             error: function (data) {
                 //console.error("Erreur dans le chargement du contenu de la page")
                 $(data.responseText).appendTo("#companyReport-reader-wrapper");
-            },
-            complete: function () {
-                AOS.init();
             }
         });
     });
