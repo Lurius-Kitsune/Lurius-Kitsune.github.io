@@ -2,36 +2,30 @@
 
 /**
  * @var array $toolsUsed
- * @var string $skillTabIcon
- * @var string $skillTabName
+ * @var array $skillTab
  * @var array $skills
+ * @var array $skillTabList
  */
 
 use Luriusfox\MyPackage\Tools\Pager;
 
+$skillTabIcon = $skillTab['tabIcon'];
+$skillTabName = $skillTab['name'];
+$skillTabId = $skillTab['id'];
+
 ?>
+<script src="/js/skill.js"></script>
 <div id="home-skill-content" class="rubrique clearfix">
-    <div class="row align-items-center justify-content-end">
-        <div class="col-sm-6">
-            <div class="container-fluid row" style="margin-right: 0px !important; margin-left: 0px !important;">
-            <h3 class="textTab"> Mes outils / logiciel utilisé⚙️ </h3>
-                <?php
-                foreach ($toolsUsed as $logicielName) {
-                    Pager::renderPage(VIEW . '/home/v_logicielUsedCard.php', [
-                        'logicielName' => $logicielName,
-                    ]);
-                }
-                ?>
-            </div>
-        </div>
-        <div class="col-sm-6">
+    <?php require_once VIEW . '/home/v_skillTabWrapper.php' ?>
+    <nav aria-label="Page navigation example" class="mt-5 d-flex justify-content-center">
+        <ul class="pagination" id='skillTabMenu'>
             <?php
-            Pager::renderPage(VIEW . '/home/v_skillTab.php', [
-                'skillTabIcon' => $skillTabIcon,
-                'skillTabName' => $skillTabName,
-                'skills' => $skills,
-            ]);
+            foreach ($skillTabList as $key => $skillTab) {
+                $name = $skillTab['name'];
+                $id = $skillTab['id'];
+                echo "<li class='page-item'><button class='page-link skillTabSelect " . ($name === $skillTabName ? 'active' : '') . "' type='button' value='$id'>$name</button></li>";
+            }
             ?>
-        </div>
-    </div>
+        </ul>
+    </nav>
 </div>

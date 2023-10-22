@@ -78,9 +78,9 @@ CREATE TABLE IF NOT EXISTS skillTab (
 );
 
 INSERT INTO skillTab (id, name, tabIcon, logiciel) VALUES 
-('art', 'Artistique', 'swatchbook', NULL),
-('network', 'Infrastrucutre réseau & web', 'globe', NULL),
-('prog', 'Programmation', 'computer', 'Vscode;Netbeans;Github'),
+('prog', 'Programmation', 'computer', 'VScode;Netbeans;Github'),
+('art', 'Artistique', 'swatchbook', 'Substance Painter;Blender;Photoshop'),
+('network', 'Infrastrucutre réseau & web', 'globe', 'Putty;VScode'),
 ('other', 'Non classé', 'file-circle-question', NULL);
 
 CREATE TABLE IF NOT EXISTS skill (
