@@ -11,12 +11,13 @@
  * @var ?array $companySubTask
  * @var array $companySkill
  * @var bool $rapportMany
+ * @var int $companyNbReport
  */
 
 use Luriusfox\MyPackage\Tools\Pager;
 
 ?>
-
+<script src="/js/companyReport.js"></script>
 <div id="work-experience-wrapper" class="experience clearfix ">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -65,9 +66,21 @@ use Luriusfox\MyPackage\Tools\Pager;
         </div>
     </div>
     <hr />
-    <?php
-    if (!$rapportMany) {
-        echo "<iframe src='/resources/pdf/$companyName.pdf' width='100%' style='height:75em'></iframe>";
-    }
-    ?>
+    <div class="container-fluid row">
+        <?php
+        if (!$rapportMany) {
+            Pager::renderPage(VIEW . '/utils/v_iframePdfReader.php', [
+                'fileName' => $companyName
+            ]);
+        } else {
+            for ($i = 1; $i <= $companyNbReport; $i++) {
+                echo "<button class='col-sm-2 btn btn-danger me-1 mb-2 reportButtonStage' type='button' id='report-$i' value='" . $companyName . "_S$i'>
+                <i class='fa fa-solid fa-file-circle-check'></i> Semaine $i
+            </button>";
+            }
+        }
+        ?>
+    </div>
+    <div id="companyReport-reader-wrapper">
+    </div>
 </div>
