@@ -4,14 +4,17 @@
  * @var string $skillName
  * @var int $skillLevel
  */
+$imagePath = '/images/skill/' . ($skillName === 'C#' ? 'Csharp' : $skillName) . '.png';
 
 ?>
 
 <div class="col-sm-6">
     <div class="card pb-3 mb-1">
-        <div class="skill-img">
-            <img src="/images/prog/<?= $skillName === 'C#' ? 'Csharp' : $skillName ?>.png" class="card-img-top" alt="<?= $skillName ?>">
-        </div>
+        <?php if (file_exists(PUBLIC_PATH . $imagePath)) : ?>
+            <div class="skill-img">
+                <img src="<?= $imagePath; ?>" class="card-img-top" alt="<?= $skillName ?>">
+            </div>
+        <?php endif ?>
         <div class="card-body" style="padding: 0px !important;">
             <h5 class="card-title text-center"><?= $skillName ?></h5>
         </div>

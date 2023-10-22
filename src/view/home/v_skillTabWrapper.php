@@ -16,7 +16,7 @@ $skillTabId = $skillTab['id'];
 ?>
 
 <div class="row align-items-center justify-content-end" id="skillTab-wrapper">
-    <div class="col-sm-6">
+    <div class="col-lg-6">
         <div class="container-fluid row justify-content-center" style="margin-right: 0px !important; margin-left: 0px !important;">
             <h3 class="textTab"> Mes outils / logiciel utilisé⚙️ </h3>
             <?php
@@ -32,7 +32,7 @@ $skillTabId = $skillTab['id'];
             ?>
         </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-lg-6">
         <?php
         require_once VIEW . '/home/v_skillTab.php';
         ?>
