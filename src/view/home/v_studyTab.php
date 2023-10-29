@@ -25,13 +25,14 @@
     ?>
     <div class="row">
         <div class="col-lg-10 offset-lg-2">
+        <ul>
             <?php
             if (is_array($studyDescription) && !empty($studyDescription)) {
                 foreach ($studyDescription as $description) {
                     echo "<li>$description</li>";
                 }
             }
-
+            echo "</ul>";
             if ($linkWebsite !== null) {
                 echo "<a href='$linkWebsite' target='_blank'>
                         <button type='button' class='custom-btn btn-3'>
