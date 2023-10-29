@@ -9,18 +9,18 @@
 * Header
 ******************************************/
 .textTab {
-    --theme-color: red;
-    color: var(--theme-color);
-    margin-bottom: 15px;
+	--theme-color: red;
+	color: var(--theme-color);
+	margin-bottom: 15px;
 }
 .textTab::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    margin: 3px 0px;
-    background: var(--theme-color);
+	content: "";
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 3px;
+	margin: 3px 0px;
+	background: var(--theme-color);
 }
 
 /****************************************
@@ -163,7 +163,8 @@
 	font-size: 1.1em;
 	font-weight: bold;
 }
-.experience .date, .experience .lieu {
+.experience .date,
+.experience .lieu {
 	font-size: 1em;
 	opacity: 0.7;
 }
@@ -243,4 +244,21 @@
 	.competences .container {
 		flex-direction: row;
 	}
+}
+
+/******************************************
+* Certif
+******************************************/
+
+.certification {
+	display: flex !important;
+	flex-direction: column !important;
+	margin: 0px 10px;
+}
+
+.certification img {
+	width: 75%;
+	height: 125px;
+	padding-top: 10px;
+	margin: auto;
 }

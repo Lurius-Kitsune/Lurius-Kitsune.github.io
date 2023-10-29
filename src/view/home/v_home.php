@@ -20,6 +20,33 @@
     </p>
 </div>
 
+<hr />
+<div id="certification-Wrapper">
+    <h3 class="text-center">Mes certifications et formation.</h3>
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="certification">
+            <img src="/images/certif/secNum.png" alt="Image logo Mooc de l'ANSSI">
+            <label class="text-center">Mooc de l'ANSSI</label>
+            <label class="text-center">(2022)</label>
+        </div>
+        <div class="certification">
+            <img src="/images/certif/atlRgpd.png" alt="Image logo Atelier RGPD">
+            <label class="text-center">Atelier RGPD de l'ANSSI</label>
+            <label class="text-center">(2023)</label>
+        </div>
+        <div class="certification">
+            <img src="/images/certif/CiscoNE.png" alt="Image logo certif Cisco Network Essentials">
+            <label class="text-center">Networking Essentials</label>
+            <label class="text-center">(2022)</label>
+        </div>
+        <div class="certification">
+            <img src="/images/certif/Unity.png" alt="Certif logo Unity Learn">
+            <label class="text-center">Unity Learn</label>
+            <label class="text-center">(2023)</label>
+        </div>
+    </div>
+</div>
+<hr />
 <?php require_once VIEW . '/home/v_homeMenu.html' ?>
 
 <div class="pt-3" id="home-content-wrapper">
