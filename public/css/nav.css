@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Good Brush";
+    src: url('/css/Good Brush.woff');
+}
+
 @media screen and (min-width:992px) {
     .navbar, .navbar .nav {
         flex-direction: column !important;
@@ -17,5 +22,12 @@
 
 nav#menuWeb {
     background-color: rgb(105, 0, 0);
-    font-family: "Pacifico", sans-serif !important;
+    font-family: "Good Brush" !important;
+    letter-spacing: 1px;
+}
+
+nav#menuWeb a:not(.dropdown-item-text, .dropdown-item) {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
 }

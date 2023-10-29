@@ -18,61 +18,27 @@ $activePage = $_SERVER['REQUEST_URI'];
 ?>
 <link rel="stylesheet" href="/css/nav.css">
 <nav class="navbar navbar-dark fixed-left navbar-expand-md col-lg-2" id="menuWeb">
-    <div class="container-fluid nav">
+    <?php require(VIEW . '/v_owner.html'); ?>
+    <div class="mt-sm-3 container-fluid nav">
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar">
             <span class="sr-only">Navigation raccourcie</span>☰
         </button>
-        <a class="navbar-brand" href="#">Mon portfolio</a>
+        <h1 class="navbar-brand text-center d-none">Portfolio | Lucas Bruel</h1>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item mt-sm-3">
                     <a href="/" class="<?= $activePage === '/' ? 'active' : ''; ?> nav-link">
                         <span class="fa fa-home"></span> Accueil
                     </a>
                 </li>
-                <li class="dropdown nav-item">
-                    <a href="#" class="<?= $activePage === '/pages/realisation/Nolark.php' ? 'active' : ''; ?> 
-                            dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="fa fa-list-alt"></span> Réalisations <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu .dropdown-menu-end" role="menu">
-                        <li role="presentation" class="dropdown-header dropdown-item">
-                            En autonomie</li>
-                        <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="#">Bot Discord Eski</a>
-                        </li>
-                        <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="#">Texturisation modèle 3D</a>
-                        </li>
-                        <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="#">Configuration de modèle 3D</a>
-                        </li>
-                        <li role="presentation" class="dropdown-header dropdown-item">
-                            Pendant mes études</li>
-                        <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="/pages/realisation/Nolark.php">Nolark</a>
-                        </li>
-                        <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="#">Mon portfolio</a>
-                        </li>
-                        <li role="presentation" class="dropdown-header dropdown-item">
-                            En entreprise</li>
-                        <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="#">Projet de 1ère année</a>
-                        </li>
-                        <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="#">Projet de 2ème année</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown nav-item">
+                <li class="dropdown nav-item mt-sm-3">
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button">
                         <span class="fa fa-graduation-cap"></span>
-                        Jury E5 BTS SIO
+                        E5 BTS SIO
                         <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header dropdown-item" role="presentation">
+                    <ul class="dropdown-menu " role="menu">
+                        <li class="dropdown-header dropdown-item-text" role="presentation">
                             Documentations contexte</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Présentation</a>
@@ -87,7 +53,7 @@ $activePage = $_SERVER['REQUEST_URI'];
                             <a class="dropdown-item" role="menuitem" href="#">Annexes</a>
                         </li>
                         <li role="presentation" class="dropdown-divider"></li>
-                        <li role="presentation" class="dropdown-header dropdown-item">
+                        <li role="presentation" class="dropdown-header dropdown-item-text">
                             Fiches d'examen</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Situation professionnelle n°1</a>
@@ -96,7 +62,7 @@ $activePage = $_SERVER['REQUEST_URI'];
                             <a class="dropdown-item" role="menuitem" href="#">Situation professionnelle n°2</a>
                         </li>
                         <li role="presentation" class="dropdown-divider"></li>
-                        <li role="presentation" class="dropdown-header dropdown-item">
+                        <li role="presentation" class="dropdown-header dropdown-item-text">
                             Démonstrations</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Démo SP n°1</a>
@@ -105,7 +71,7 @@ $activePage = $_SERVER['REQUEST_URI'];
                             <a class="dropdown-item" role="menuitem" href="#">Démo SP n°2</a>
                         </li>
                         <li role="presentation" class="dropdown-divider"></li>
-                        <li role="presentation" class="dropdown-header dropdown-item">
+                        <li role="presentation" class="dropdown-header dropdown-item-text">
                             Codes sources</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Sources SP n°1</a>
@@ -115,14 +81,45 @@ $activePage = $_SERVER['REQUEST_URI'];
                         </li>
                     </ul>
                 </li>
+                <li class="dropdown nav-item mt-sm-3">
+                    <a href="#" class="<?= $activePage === '/pages/realisation/Nolark.php' ? 'active' : ''; ?> 
+                            dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="fa fa-list-alt"></span> Réalisations <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation" class="dropdown-header dropdown-item-text">
+                            En autonomie</li>
+                        <li role="presentation">
+                            <a class="dropdown-item" role="menuitem" href="#">Bot Discord Eski</a>
+                        </li>
+                        <li role="presentation">
+                            <a class="dropdown-item" role="menuitem" href="#">Texturisation modèle 3D</a>
+                        </li>
+                        <li role="presentation">
+                            <a class="dropdown-item" role="menuitem" href="#">Configuration de modèle 3D</a>
+                        </li>
+                        <li role="presentation" class="dropdown-header dropdown-item-text">
+                            Pendant mes études</li>
+                        <li role="presentation">
+                            <a class="dropdown-item" role="menuitem" href="/pages/realisation/Nolark.php">Nolark</a>
+                        </li>
+                        <li role="presentation">
+                            <a class="dropdown-item" role="menuitem" href="#">Mon portfolio</a>
+                        </li>
+                        <li role="presentation" class="dropdown-header dropdown-item">
+                            En entreprise</li>
+                        <li role="presentation">
+                            <a class="dropdown-item" role="menuitem" href="/?action=companyReport&company=Evoliz">Evoliz</a>
+                        </li>
+                        <li role="presentation">
+                            <a class="dropdown-item" role="menuitem" href="#">Projet de 2ème année</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
-    <?php require(VIEW . '/v_owner.html'); ?>
 </nav>
 
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
