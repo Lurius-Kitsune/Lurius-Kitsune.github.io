@@ -31,7 +31,6 @@ $(window).on("load", function () {
                     console.error("Erreur dans le chargement du contenu de la page")
                 },
                 complete: function () {
-                    AOS.init();
                     // remove disable attribute from button
                     $("#home-menu li button").removeAttr("disabled");
                 }
