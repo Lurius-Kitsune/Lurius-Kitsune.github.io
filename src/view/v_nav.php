@@ -17,7 +17,7 @@ $activePage = $_SERVER['REQUEST_URI'];
 
 ?>
 <link rel="stylesheet" href="/css/nav.css">
-<nav class="navbar navbar-dark bg-primary fixed-left navbar-expand-md col-lg-2" id="menu">
+<nav class="navbar navbar-dark fixed-left navbar-expand-md col-lg-2" id="menuWeb">
     <div class="container-fluid nav">
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar">
             <span class="sr-only">Navigation raccourcie</span>☰

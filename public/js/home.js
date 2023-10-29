@@ -16,6 +16,9 @@ $(window).on("load", function () {
             $linkContent.removeClass("d-none");
         }
         else {
+            // block every button from ul
+            $("#home-menu li button").attr("disabled", true);
+
             //request content from server and parse it to html
             $.ajax({
                 url: "/",
@@ -29,6 +32,8 @@ $(window).on("load", function () {
                 },
                 complete: function () {
                     AOS.init();
+                    // remove disable attribute from button
+                    $("#home-menu li button").removeAttr("disabled");
                 }
             });
         }

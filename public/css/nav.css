@@ -15,6 +15,7 @@
     }
 }
 
-nav {
+nav#menuWeb {
+    background-color: rgb(105, 0, 0);
     font-family: "Pacifico", sans-serif !important;
 }
