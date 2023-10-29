@@ -74,7 +74,7 @@ $activePage = $_SERVER['REQUEST_URI'];
                         <li role="presentation" class="dropdown-header dropdown-item-text">
                             Codes sources</li>
                         <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="#">Sources SP n°1</a>
+                            <a class="dropdown-item" role="menuitem" href="https://github.com/Lurius-Kitsune/AP1-GSB" target="_blank">Sources SP n°1</a>
                         </li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Sources SP n°2</a>
