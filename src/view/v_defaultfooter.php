@@ -28,9 +28,9 @@
         </div>
         <div class="col-lg-4 border-rainbow">
             <h2>Anecdote</h2>
-            <p>Connaissez-vous le "Konami&nbsp;Code" ? C'est l'un code triche crée l'entreprise Konami, 
-                on peut l'appeler le code triche par référence, et il consiste à une série de combinaisons 
-                de touche, à taper sur l'ordinateur ou console (toutes mes excuses au utilisateur mobile), 
+            <p>Connaissez-vous le "Konami&nbsp;Code" ? C'est l'un code triche crée l'entreprise Konami,
+                on peut l'appeler le code triche par référence, et il consiste à une série de combinaisons
+                de touche, à taper sur l'ordinateur ou console (toutes mes excuses au utilisateur mobile),
                 permettant l'activation d'un code triche ou de fonctionnalité secrète.
                 D'ailleurs, pensez-vous que le fan de jeux&nbsp;vidéo que je suis, aurais osé cacher cela ?
             </p>
@@ -49,17 +49,17 @@
 </div>
 
 <script>
-
-document.querySelectorAll('.dyn-text-owner').forEach(function(el) {
-    new Typed(el, {
-    strings: ['<?= getAge('11/04/2003') . ' ans'; ?>', 'Lurius ?', 'BTS SIO', 'Dev. Jeux Vidéo', '↑ ↑ ↓ ↓← → ← → B A'],
-      typeSpeed: 50,
-      backSpeed: 50,
-      smartBackspace: 1,
-      loop: 0,
-      startDelay: 700, 
-      backDelay: 2000,
-      shuffle: true,
-  })
-});
+    document.querySelectorAll('.dyn-text-owner').forEach(function(el) {
+        var typed = new Typed(el, {
+            strings: ['<?= getAge('11/04/2003') . ' ans'; ?>', 'Lurius ?', 'BTS SIO', 'Dev. Jeux Vidéo', '↑ ↑ ↓ ↓← → ← → B A'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            smartBackspace: 1,
+            loop: 0,
+            startDelay: 700,
+            backDelay: 2000,
+            shuffle: true,
+        })
+        typed.reset(true);
+    });
 </script>
