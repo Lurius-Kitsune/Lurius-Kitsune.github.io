@@ -23,7 +23,7 @@ $activePage = $_SERVER['REQUEST_URI'];
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar">
             <span class="sr-only">Navigation raccourcie</span>☰
         </button>
-        <h1 class="navbar-brand text-center d-none">Portfolio | Lucas Bruel</h1>
+        <h1 class="navbar-brand text-center d-lg-none">Portfolio | Lucas Bruel</h1>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="nav-item mt-sm-3">
