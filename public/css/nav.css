@@ -1,33 +1,38 @@
 @font-face {
-    font-family: "Good Brush";
-    src: url('/css/Good Brush.woff');
+	font-family: "Good Brush";
+	src: url("/css/font/Good Brush.woff");
 }
 
-@media screen and (min-width:992px) {
-    .navbar, .navbar .nav {
-        flex-direction: column !important;
-        height: 100%;
-    }
+@media screen and (min-width: 992px) {
+	.navbar,
+	.navbar .nav {
+		flex-direction: column !important;
+		height: 100%;
+	}
 
-    .navbar {
-        border-right: 10px ridge rgb(255, 255, 255);
-        box-shadow: 15px 12px 12px rgba(0, 0, 0, 0.2)
-    }
+	.navbar {
+		border-right: 10px ridge rgb(255, 255, 255);
+		box-shadow: 15px 12px 12px rgba(0, 0, 0, 0.2);
+	}
 
-    .fixed-left {
-        position: fixed;
-        z-index: 1030;
-    }
+	.fixed-left {
+		position: fixed;
+		z-index: 1030;
+	}
 }
 
 nav#menuWeb {
-    background-color: rgb(105, 0, 0);
-    font-family: "Good Brush" !important;
-    letter-spacing: 1px;
+	background-color: rgb(105, 0, 0);
+	font-family: "Good Brush" !important;
+	letter-spacing: 1px;
 }
 
 nav#menuWeb a:not(.dropdown-item-text, .dropdown-item) {
-    font-size: 1.2em;
-    font-weight: 700;
-    text-decoration: none;
+	font-size: 1.2em;
+	font-weight: 700;
+	text-decoration: none;
+}
+.dropdown-menu {
+	max-height: 300px !important;
+	overflow-y: auto;
 }
