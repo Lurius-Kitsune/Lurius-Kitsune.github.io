@@ -14,7 +14,7 @@ use Luriusfox\MyPackage\Tools\Pager;
 <?php
 $table = $pdo->getAllCompanyInfo();
 foreach ($table as $Tablekey => $value) {
-    Pager::renderPage(VIEW . '/home/v_workExpTab.php', [
+    Pager::renderView(VIEW . '/home/v_workExpTab.php', [
         'isNew' => $value['isNew'],
         'companyName' => $value['companyName'],
         'companyLieu' => $value['lieu'],

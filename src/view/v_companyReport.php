@@ -59,7 +59,7 @@ use Luriusfox\MyPackage\Tools\Pager;
             <?php endif; ?>
             <div class="details">
                 <p class="mb-0">Compétences travailler :</p>
-                <?php Pager::renderPage(VIEW . '/utils/v_listBadge.php', [
+                <?php Pager::renderView(VIEW . '/utils/v_listBadge.php', [
                     'companySkill' => $companySkill
                 ]); ?>
             </div>
@@ -69,7 +69,7 @@ use Luriusfox\MyPackage\Tools\Pager;
     <div class="container-fluid row row-cols-7" style="margin-left: 0px;">
         <?php
         if (!$rapportMany) {
-            Pager::renderPage(VIEW . '/utils/v_iframePdfReader.php', [
+            Pager::renderView(VIEW . '/utils/v_iframePdfReader.php', [
                 'fileName' => $companyName
             ]);
         } else {

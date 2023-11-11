@@ -48,7 +48,7 @@ $studyTable['dnb'] = [
     'linkWebsite' => null
 ];
 foreach ($studyTable as $studyKey => $studyValue) {
-    Pager::renderPage(VIEW . '/home/v_studyTab.php', [
+    Pager::renderView(VIEW . '/home/v_studyTab.php', [
         'studyId' => $studyKey,
         'studyName' => $studyValue['name'],
         'studyYearsPeriod' => $studyValue['yearsPeriod'],
