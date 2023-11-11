@@ -28,7 +28,7 @@ use Luriusfox\MyPackage\Tools\Pager;
     <hr />
     <div class="row justify-content-end">
         <div class="col-sm-3 col-lg-2">
-            <img src="<?= $companyImage; ?>" style="width: 100%;" class="card-img-top" alt="Photo de l'entreprise <?= $companyName; ?>">
+            <img src="<?= $companyImage; ?>" class=" w-100 card-img-top" alt="Photo de l'entreprise <?= $companyName; ?>">
         </div>
         <div class="col-sm-9 col-lg-2">
             <div class="lieu"><?= $companyLieu; ?></div>
@@ -66,7 +66,7 @@ use Luriusfox\MyPackage\Tools\Pager;
         </div>
     </div>
     <hr />
-    <div class="container-fluid row">
+    <div class="container-fluid row row-cols-7" style="margin-left: 0px;">
         <?php
         if (!$rapportMany) {
             Pager::renderPage(VIEW . '/utils/v_iframePdfReader.php', [
@@ -74,13 +74,27 @@ use Luriusfox\MyPackage\Tools\Pager;
             ]);
         } else {
             for ($i = 1; $i <= $companyNbReport; $i++) {
-                echo "<button class='col-sm-2 btn btn-danger me-1 mb-2 reportButtonStage' type='button' id='report-$i' value='" . $companyName . "_S$i'>
+                echo "<div class='pr-1 pb-2 col-sm-2'>";
+                echo "<button class='btn w-100 btn-danger reportButtonStage' type='button' id='report-$i' value='" . $companyName . "_S$i' >
                 <i class='fa fa-solid fa-file-circle-check'></i> Semaine $i
-            </button>";
+            </button></div>";
             }
         }
         ?>
     </div>
-    <div id="companyReport-reader-wrapper">
+    <div class="modal fade" id="rapportModal" tabindex="-1" aria-labelledby="rapportModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rapportModalLabel">Certification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Le document de certification sera affiché ici -->
+                    <iframe class="mt-2" src='/resources/pdf/<?= $companyName; ?>_S1.pdf' width='100%' style='height:50em' id="pdfReader"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>
