@@ -5,11 +5,13 @@
  * @var array $projectBlocs
  * @var string $projectDuration
  * @var string $projectDescription
- * @var array $projectCardList
- * @var string $projectSubDescription
+ * @var array $projectItemList
+ * @var ?array $projectSubDescription
  * @var ?string $projectGithub
  * @var ?string $projectDemo
  */
+
+use Luriusfox\MyPackage\Tools\Pager;
 
 ?>
 <div class="box-lg rounded bg-white">
@@ -34,27 +36,17 @@
         </li>
     </ul>
     <div class="container">
-        <div class="row">
-            <?php foreach ($projectCardList as $card) : ?>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm border-sm border-red">
-                        <img class="card-img-top" src="/images/Nolark/acceuil_nolark.png">
-                        <div class="card-body">
-                            <p class="card-text">
-                                La page d'acceuil du site Nolark.
-                            </p>
-                            <br>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/images/Nolark/acceuil_nolark.png" target="_blank">Voir</a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-        <p class="font-italic">
-            <?= $projectSubDescription; ?>
-        </p>
+        <?php if (!empty($projectItemList)) {
+            Pager::renderView(VIEW . '/realisation/v_carousel.php', [
+                'projectItemList' => $projectItemList
+            ]);
+        }
+        ?>
+        <?php foreach ($projectSubDescription as $subDescription) : ?>
+            <p class="font-italic mt-2">
+                <?= $subDescription['text_content']; ?>
+            </p>
+        <?php endforeach; ?>
         <?php if (!is_null($projectGithub)) : ?>
             <a href="<?= $projectGithub; ?>" target="_blank"><button class="btn btn-secondary" style="width: 135px"><span class="fa fa-brands fa-github "></span> Code source</button></a>
         <?php endif; ?>
@@ -63,3 +55,11 @@
         <?php endif; ?>
     </div>
 </div>
+<script>
+    document.addEventListener('load', function() {
+        var myCarousel = document.querySelector('#projectCarousel')
+        if (myCarousel) {
+            var carousel = new bootstrap.Carousel(myCarousel)
+        }
+    });
+</script>

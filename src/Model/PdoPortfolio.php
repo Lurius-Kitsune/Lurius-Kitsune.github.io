@@ -99,4 +99,24 @@ class PdoPortfolio
         $result->execute();
         return $result->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function getCarousselProjectInfo(string $projectId): array|bool
+    {
+        $result = $this->connexion->prepare("SELECT realisation_image.image_url, realisation_image.alt_text, realisation_text.text_content, carousel_item.button_id 
+                                            FROM carousel_item 
+                                            INNER JOIN realisation_text ON realisation_text.text_id = carousel_item.text_id
+                                            INNER JOIN realisation_image ON realisation_image.image_id = carousel_item.image_id
+                                            WHERE carousel_item.realisation_id = :projectId");
+        $result->bindParam(':projectId', $projectId, PDO::PARAM_STR);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getProjectSubDescription(string $projectId): array|bool
+    {
+        $result = $this->connexion->prepare("SELECT text_content FROM realisation_text WHERE realisation_id = :projectId and text_id LIKE 'SubText%'");
+        $result->bindParam(':projectId', $projectId, PDO::PARAM_STR);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
