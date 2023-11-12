@@ -55,6 +55,9 @@ use Luriusfox\MyPackage\Tools\Pager;
         <?php endif; ?>
     </div>
 </div>
+<?php
+
+?>
 <script>
     document.addEventListener('load', function() {
         var myCarousel = document.querySelector('#projectCarousel')

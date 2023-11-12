@@ -5,7 +5,7 @@
  * @var string $itemImageUrl
  * @var string $itemImageAlt
  * @var string $itemDescription
- * @var ?string $itemButton
+ * @var ?string $ressourceUrl
  */
 
 ?>
@@ -35,7 +35,8 @@
     <div class="carousel-caption d-block">
         <h5 class="d-none d-md-block"><?= $itemDescription; ?></h5>
         <p class="d-block d-md-none"><?= $itemDescription; ?></p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal<?= $itemButton; ?>">
+        <a class="btn btn-primary" href="<?= $ressourceUrl ?>" target="_blank">
             Voir
+        </a>
     </div>
 </div>
