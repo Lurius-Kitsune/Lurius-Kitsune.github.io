@@ -40,7 +40,7 @@ class Pager
     {
         if (is_file($filename)) {
             ob_start();
-            self::renderView($filename, $vars);
+            self::renderView($filename, (is_null($vars) ? ['pdo' => $pdo] : array_merge($vars, ['pdo' => $pdo])));
             return ob_get_clean();
         }
         return false;
