@@ -13,7 +13,7 @@ function getAge(string $birthDate)
     return $age;
 }
 
-$activePage = $_SERVER['REQUEST_URI'];
+$activePage = $_GET['action'] ?? '/';
 
 ?>
 <link rel="stylesheet" href="/css/nav.css">
@@ -32,7 +32,7 @@ $activePage = $_SERVER['REQUEST_URI'];
                     </a>
                 </li>
                 <li class="dropdown nav-item mt-sm-3">
-                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button">
+                    <a href="#" class="<?= $activePage === 'e5sioController' ? 'active' : ''; ?> dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button">
                         <span class="fa fa-graduation-cap"></span>
                         E5 BTS SIO
                         <span class="caret"></span>
@@ -82,7 +82,7 @@ $activePage = $_SERVER['REQUEST_URI'];
                     </ul>
                 </li>
                 <li class="dropdown nav-item mt-sm-3">
-                    <a href="#" class="<?= $activePage === '/pages/realisation/Nolark.php' ? 'active' : ''; ?> 
+                    <a href="#" class="<?= $activePage === 'realisationController' ? 'active' : ''; ?> 
                             dropdown-toggle nav-link" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                         <span class="fa fa-list-alt"></span> Réalisations <span class="caret"></span>
                     </a>
@@ -104,7 +104,7 @@ $activePage = $_SERVER['REQUEST_URI'];
                             <a class="dropdown-item" role="menuitem" href="/?action=realisationController&projectId=nolark">Nolark</a>
                         </li>
                         <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="#">Mon portfolio</a>
+                            <a class="dropdown-item" role="menuitem" href="/?action=realisationController&projectId=portfolio">Mon portfolio</a>
                         </li>
                         <li role="presentation" class="dropdown-header dropdown-item">
                             En entreprise</li>

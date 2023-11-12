@@ -119,7 +119,7 @@ INSERT INTO langues (langueName, langueLevel) VALUES
 ('Anglais', 'B1');
 
 CREATE TABLE IF NOT EXISTS realisation (
-    id            VARCHAR(10) NOT NULL,
+    id            VARCHAR(15) NOT NULL,
     name    VARCHAR(50) NOT NULL,
     listBloc   VARCHAR(100) NOT NULL,
     duration VARCHAR(100) NOT NULL,
@@ -131,8 +131,11 @@ CREATE TABLE IF NOT EXISTS realisation (
 
 drop table realisation;
 
-INSERT INTO realisation (id, name, listBloc, duration, description) VALUES
-('portfolio', 'Portfolio', '1.3;1.4', 'Début Janvier 2023 - Toujours en cours...', 'Création d\'un portfolio en PHP, HTML, CSS, JS et SQL.');
+INSERT INTO realisation (id, name, listBloc, duration, description, repositoryLink, demoLink) VALUES
+('portfolio', 'Portfolio', '1.3;1.4', 'Début Janvier 2023 - Toujours en cours...', 
+'Création d\'un portfolio en PHP, HTML, CSS, JS et SQL.',
+'https://github.com/Lurius-Kitsune/Lurius-Kitsune.github.io',
+null);
 
 INSERT INTO realisation (id, name, listBloc, duration, description, repositoryLink, demoLink) VALUES 
 ('nolark', 'Le site Nolark', '1.2', 'Septembre à fin Décembre 2022', 
