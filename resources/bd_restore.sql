@@ -129,7 +129,37 @@ CREATE TABLE IF NOT EXISTS realisation (
     CONSTRAINT PK_REALISATION PRIMARY KEY (id)
 );
 
-drop table realisation;
+CREATE TABLE IF NOT EXISTS realisation_text (
+    text_id       VARCHAR(15) NOT NULL,
+    realisation_id VARCHAR(15) NOT NULL,
+    text_content  TEXT NOT NULL,
+    CONSTRAINT PK_REALISATION_TEXT PRIMARY KEY (text_id),
+    CONSTRAINT FK_REALISATION_TEXT FOREIGN KEY (realisation_id) REFERENCES realisation(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS realisation_image (
+    image_id       VARCHAR(15) NOT NULL,
+    realisation_id VARCHAR(15) NOT NULL,
+    image_url      VARCHAR(500) NOT NULL,
+    alt_text       VARCHAR(255) NOT NULL,
+    CONSTRAINT PK_REALISATION_IMAGE PRIMARY KEY (image_id),
+    CONSTRAINT FK_REALISATION_IMAGE FOREIGN KEY (realisation_id) REFERENCES realisation(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS carousel_item (
+    carousel_item_id VARCHAR(15) NOT NULL,
+    realisation_id   VARCHAR(15) NOT NULL,
+    text_id          VARCHAR(15) NULL,
+    image_id         VARCHAR(15) NOT NULL,
+    button_id        VARCHAR(15) NULL,
+    CONSTRAINT PK_CAROUSEL_ITEM PRIMARY KEY (carousel_item_id),
+    CONSTRAINT FK_CAROUSEL_REALISATION FOREIGN KEY (realisation_id) REFERENCES realisation(id) ON DELETE CASCADE,
+    CONSTRAINT FK_CAROUSEL_TEXT FOREIGN KEY (text_id) REFERENCES realisation_text(text_id) ON DELETE SET NULL,
+    CONSTRAINT FK_CAROUSEL_IMAGE FOREIGN KEY (image_id) REFERENCES realisation_image(image_id) ON DELETE CASCADE
+);
+
+
+drop table realisation_image;
 
 INSERT INTO realisation (id, name, listBloc, duration, description, repositoryLink, demoLink) VALUES
 ('portfolio', 'Portfolio', '1.3;1.4', 'Début Janvier 2023 - Toujours en cours...', 
@@ -145,7 +175,25 @@ une section d’achat en ligne avec une large gamme de produits disponible, mais
 'https://github.com/Lurius-Kitsune/Tp-Nolark',
 'https://lurius-kitsune.github.io/Tp-Nolark/');
 
--- INSERT INTO realisationressources (idRealisation, resType, resOrder, resText, resLink) VALUES 
+INSERT INTO realisation_text (text_id, realisation_id, text_content) VALUES 
+('SubText1', 'nolark', 'Le projet Nolark est un site fictif développé pendant le début de 
+la 1 ére année de BTS SIO par une série de TP réalisé par les étudiants afin d\'apprendre les 
+bases du développement en HTML, en CSS, en JS ainsi qu’une introduction sur le PHP.'),
+('CarText1', 'nolark', 'La page d\'acceuil du site Nolark.'),
+('CarText2', 'nolark', 'Le code HTML de la page d\'acceuil.'),
+('CarText3', 'nolark', 'Exemple de code CSS fait pour la page.');
+
+INSERT INTO realisation_image (image_id, realisation_id, image_url, alt_text) VALUES 
+('screenHome1', 'nolark', '/images/Nolark/acceuil_nolark.png', 'La page d\'acceuil du site Nolark.'),
+('screenHtml1', 'nolark', '/images/Nolark/nolark_html.png', 'Le code HTML de la page d\'acceuil.'),
+('screenCss1', 'nolark', '/images/Nolark/nolark_css.png', 'Exemple de code CSS fait pour la page.');
+
+INSERT INTO carousel_item (carousel_item_id, realisation_id, text_id, image_id, button_id) VALUES 
+('car1', 'nolark', 'CarText1', 'screenHome1', 'viewHomeMenu'),
+('car2', 'nolark', 'CarText2', 'screenHtml1', 'viewHtmlCode'),
+('car3', 'nolark', 'CarText3', 'screenCss1', 'viewCssCode');
+
+
 -- ('nolark', 'img', '1', 'La page d\'acceuil du site Nolark.', '/images/Nolark/acceuil_nolark.png'),
 -- ('nolark', 'img', '1', 'Le code HTML de la page d\'acceuil.', '/images/Nolark/acceuil_nolark.png')
 
