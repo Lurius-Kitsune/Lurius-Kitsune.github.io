@@ -36,11 +36,11 @@ class Pager
         }
     }
 
-    public static function extractFile(string $filename, ?PdoPortfolio $pdo = null): string
+    public static function extractFile(string $filename, ?PdoPortfolio $pdo = null, ?array $vars = null): string
     {
         if (is_file($filename)) {
             ob_start();
-            include $filename;
+            self::renderView($filename, $vars);
             return ob_get_clean();
         }
         return false;

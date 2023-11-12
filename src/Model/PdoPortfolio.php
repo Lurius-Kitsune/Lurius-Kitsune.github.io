@@ -91,4 +91,12 @@ class PdoPortfolio
         $result = $this->connexion->query("SELECT skillTab.id, skillTab.name FROM skillTab");
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getProjectInfo(string $projectId): array|bool
+    {
+        $result = $this->connexion->prepare("SELECT * FROM realisation WHERE id = :projectId");
+        $result->bindParam(':projectId', $projectId, PDO::PARAM_STR);
+        $result->execute();
+        return $result->fetch(PDO::FETCH_ASSOC);
+    }
 }

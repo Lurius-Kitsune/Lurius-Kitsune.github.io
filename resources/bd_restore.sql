@@ -117,3 +117,32 @@ CREATE TABLE IF NOT EXISTS langues (
 INSERT INTO langues (langueName, langueLevel) VALUES
 ('Français', 'C1'),
 ('Anglais', 'B1');
+
+CREATE TABLE IF NOT EXISTS realisation (
+    id            VARCHAR(10) NOT NULL,
+    name    VARCHAR(50) NOT NULL,
+    listBloc   VARCHAR(100) NOT NULL,
+    duration VARCHAR(100) NOT NULL,
+    description VARCHAR(1000) NOT NULL,
+    repositoryLink VARCHAR(500) NULL,
+    demoLink VARCHAR(500) NULL,
+    CONSTRAINT PK_REALISATION PRIMARY KEY (id)
+);
+
+drop table realisation;
+
+INSERT INTO realisation (id, name, listBloc, duration, description) VALUES
+('portfolio', 'Portfolio', '1.3;1.4', 'Début Janvier 2023 - Toujours en cours...', 'Création d\'un portfolio en PHP, HTML, CSS, JS et SQL.');
+
+INSERT INTO realisation (id, name, listBloc, duration, description, repositoryLink, demoLink) VALUES 
+('nolark', 'Le site Nolark', '1.2', 'Septembre à fin Décembre 2022', 
+'Ce site vise à avertir des dangers présents sur la route ainsi que l’importance du port du casque 
+pour les conducteurs de deux-roues. On y trouve une section visant à sensibiliser les usagers de la route, 
+une section d’achat en ligne avec une large gamme de produits disponible, mais aussi une page de contact.',
+'https://github.com/Lurius-Kitsune/Tp-Nolark',
+'https://lurius-kitsune.github.io/Tp-Nolark/');
+
+-- INSERT INTO realisationressources (idRealisation, resType, resOrder, resText, resLink) VALUES 
+-- ('nolark', 'img', '1', 'La page d\'acceuil du site Nolark.', '/images/Nolark/acceuil_nolark.png'),
+-- ('nolark', 'img', '1', 'Le code HTML de la page d\'acceuil.', '/images/Nolark/acceuil_nolark.png')
+

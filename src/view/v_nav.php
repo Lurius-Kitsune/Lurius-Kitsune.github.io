@@ -101,7 +101,7 @@ $activePage = $_SERVER['REQUEST_URI'];
                         <li role="presentation" class="dropdown-header dropdown-item-text">
                             Pendant mes études</li>
                         <li role="presentation">
-                            <a class="dropdown-item" role="menuitem" href="/?action=realisationController">Nolark</a>
+                            <a class="dropdown-item" role="menuitem" href="/?action=realisationController&projectId=nolark">Nolark</a>
                         </li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Mon portfolio</a>
