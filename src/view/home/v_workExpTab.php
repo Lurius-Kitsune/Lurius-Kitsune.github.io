@@ -40,7 +40,7 @@ use Luriusfox\MyPackage\Tools\Pager;
             </div>
             <div class="details">
                 <p class="mb-0">Compétences travailler :</p>
-                <?php Pager::renderPage(VIEW . '/utils/v_listBadge.php', [
+                <?php Pager::renderView(VIEW . '/utils/v_listBadge.php', [
                     'companySkill' => $companySkill
                 ]); ?>
             </div>

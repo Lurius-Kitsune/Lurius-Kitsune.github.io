@@ -16,6 +16,9 @@ switch ($action) {
     case 'homeController':
         require_once CONTROLLER . '/home/c_homeMenu.php';
         break;
+    case 'realisationController':
+        require_once CONTROLLER . '/realisation/c_realisationMenu.php';
+        break;
     default:
         require_once CONTROLLER . '/c_home.php';
         break;

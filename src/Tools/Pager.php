@@ -8,15 +8,22 @@ use Luriusfox\MyPackage\Model\PdoPortfolio;
 
 /**
  * @var PdoPortfolio $pdo
-**/
+ **/
 
 class Pager
 {
     // return the html page
-    public static function renderPage(string $page, array $vars)
+    public static function renderView(string $page, ?array $vars = null)
     {
         if (!file_exists($page)) {
             throw new \Exception("La page n'existe pas" . $page);
+        } elseif (is_null($vars)) {
+            // start output buffering
+            ob_start();
+            // include the page
+            include $page;
+            // return the page
+            echo ob_get_clean();
         } else {
             // start output buffering
             ob_start();
@@ -29,11 +36,11 @@ class Pager
         }
     }
 
-    public static function getIncludeContents(string $filename, ?PdoPortfolio $pdo = null): string
+    public static function extractFile(string $filename, ?PdoPortfolio $pdo = null, ?array $vars = null): string
     {
         if (is_file($filename)) {
             ob_start();
-            include $filename;
+            self::renderView($filename, $vars);
             return ob_get_clean();
         }
         return false;

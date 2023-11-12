@@ -12,7 +12,7 @@ if (!empty($_POST)) {
     if (isset($_POST['fileName'])) {
         $postfileName = filter_input(INPUT_POST, 'fileName', FILTER_SANITIZE_SPECIAL_CHARS);
         if (file_exists(PUBLIC_PATH . "/resources/pdf/$postfileName.pdf")) {
-            Pager::renderPage(VIEW . '/utils/v_iframePdfReader.php', [
+            Pager::renderView(VIEW . '/utils/v_iframePdfReader.php', [
                 'fileName' => $postfileName,
             ]);
         } else {
@@ -28,7 +28,7 @@ if (!empty($_POST)) {
 } else {
     $companyName = filter_input(INPUT_GET, 'company', FILTER_SANITIZE_SPECIAL_CHARS);
     $company = $pdo->getCompanyInfo($companyName);
-    Pager::renderPage(VIEW . '/v_companyReport.php', [
+    Pager::renderView(VIEW . '/v_companyReport.php', [
         'companyName' => $company['companyName'],
         'companyLieu' => $company['lieu'],
         'companyDuration' => $company['duree'],

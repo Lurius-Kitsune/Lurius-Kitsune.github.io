@@ -22,7 +22,7 @@ if (!is_array($skillInfo)) {
     exit();
 } else {
     echo '<link rel="stylesheet" href="/css/skill.css">';
-    Pager::renderPage($page, [
+    Pager::renderView($page, [
         'skillTab' => $skillInfo[0],
         'toolsUsed' => !is_null($skillInfo[0]['logiciel']) ? explode(';', $skillInfo[0]['logiciel']) : null,
         'skills' => $skillInfo,
