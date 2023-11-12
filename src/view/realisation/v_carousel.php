@@ -12,7 +12,7 @@ use Luriusfox\MyPackage\Tools\Pager;
         <?php
         $i = 0;
         foreach ($projectItemList as $item) : ?>
-            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="<?= $i ?>" <?= $i == 1 ? 'class="active" aria-current="true"' : '' ?> aria-label="Slide <?= $item['carousel_item_id'] ?>"></button>
+            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="<?= $i ?>" <?= $i == 0 ? 'class="active" aria-current="true"' : '' ?> aria-label="Slide <?= $item['carousel_item_id'] ?>"></button>
             <?php $i++; ?>
         <?php endforeach; ?>
     </div>

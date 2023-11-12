@@ -20,7 +20,7 @@ CREATE TABLE companywork (
   nbReport          INT         NULL,
   isNew             BOOLEAN     NOT NULL DEFAULT TRUE,
   CONSTRAINT PK_COMPANYWORK PRIMARY KEY (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO companywork (companyName, lieu, duree, workType, imageLink, jobPost, mainTask, subTask, skill, hasManyReport, nbReport, isNew) VALUES
 ('Progial', 
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS skillTab (
     tabIcon VARCHAR(50) NOT NULL,
     logiciel VARCHAR(200) NULL,
     CONSTRAINT PK_SKILLTAB PRIMARY KEY (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO skillTab (id, name, tabIcon, logiciel) VALUES 
 ('prog', 'Programmation', 'computer', 'VScode;Netbeans;Github'),
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS skill (
   CONSTRAINT PK_SKILL PRIMARY KEY (id),
   CONSTRAINT FK_SKILL_SKILLTAB FOREIGN KEY (skillType) REFERENCES skillTab(id),
   CONSTRAINT CK_SKILL_SKILLLEVEL CHECK (skillLevel >= 0 AND skillLevel <= 10)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO skill (skillName, skillLevel, skillType) VALUES 
 ('Texturisation 3D', 6, 'art'),
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS langues (
     langueName    VARCHAR(50) NOT NULL,
     langueLevel   ENUM('A1', 'A2', 'B1', 'B2', 'C1', 'C2') NOT NULL,
     CONSTRAINT PK_LANGUES PRIMARY KEY (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO langues (langueName, langueLevel) VALUES
 ('Français', 'C1'),
@@ -127,45 +127,59 @@ CREATE TABLE IF NOT EXISTS realisation (
     repositoryLink VARCHAR(500) NULL,
     demoLink VARCHAR(500) NULL,
     CONSTRAINT PK_REALISATION PRIMARY KEY (id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS realisation_text (
     text_id       VARCHAR(15) NOT NULL,
     realisation_id VARCHAR(15) NOT NULL,
     text_content  TEXT NOT NULL,
-    CONSTRAINT PK_REALISATION_TEXT PRIMARY KEY (text_id),
+    CONSTRAINT PK_REALISATION_TEXT PRIMARY KEY (text_id, realisation_id),
     CONSTRAINT FK_REALISATION_TEXT FOREIGN KEY (realisation_id) REFERENCES realisation(id) ON DELETE CASCADE
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS realisation_image (
     image_id       VARCHAR(15) NOT NULL,
     realisation_id VARCHAR(15) NOT NULL,
     image_url      VARCHAR(500) NOT NULL,
     alt_text       VARCHAR(255) NOT NULL,
-    CONSTRAINT PK_REALISATION_IMAGE PRIMARY KEY (image_id),
+    CONSTRAINT PK_REALISATION_IMAGE PRIMARY KEY (image_id, realisation_id),
     CONSTRAINT FK_REALISATION_IMAGE FOREIGN KEY (realisation_id) REFERENCES realisation(id) ON DELETE CASCADE
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS carousel_item (
     carousel_item_id VARCHAR(15) NOT NULL,
     realisation_id   VARCHAR(15) NOT NULL,
     text_id          VARCHAR(15) NULL,
     image_id         VARCHAR(15) NOT NULL,
-    button_id        VARCHAR(15) NULL,
-    CONSTRAINT PK_CAROUSEL_ITEM PRIMARY KEY (carousel_item_id),
+    ressource_url VARCHAR(500) NOT NULL,
+    CONSTRAINT PK_CAROUSEL_ITEM PRIMARY KEY (carousel_item_id, realisation_id),
     CONSTRAINT FK_CAROUSEL_REALISATION FOREIGN KEY (realisation_id) REFERENCES realisation(id) ON DELETE CASCADE,
     CONSTRAINT FK_CAROUSEL_TEXT FOREIGN KEY (text_id) REFERENCES realisation_text(text_id) ON DELETE SET NULL,
     CONSTRAINT FK_CAROUSEL_IMAGE FOREIGN KEY (image_id) REFERENCES realisation_image(image_id) ON DELETE CASCADE
-);
-
-
-drop table realisation_image;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 INSERT INTO realisation (id, name, listBloc, duration, description, repositoryLink, demoLink) VALUES
 ('portfolio', 'Portfolio', '1.3;1.4', 'Début Janvier 2023 - Toujours en cours...', 
-'Création d\'un portfolio en PHP, HTML, CSS, JS et SQL.',
+'Projet réalisé au cours de mes 2 années de BTS SIO. Celui-ci a été présenté lors de 
+l\'épreuve E4 du BTS.',
 'https://github.com/Lurius-Kitsune/Lurius-Kitsune.github.io',
 null);
+
+INSERT INTO realisation_text (text_id, realisation_id, text_content) VALUES 
+('SubText1', 'portfolio', 'le but étant de m\'en servir afin de présenter mes réalisations 
+aux entreprises et ainsi montrer ma détermination et ma volonté d\'apprendre. 
+Grâce à ce projet, j\'ai pu mettre en pratique les compétences acquises tout au long de ma formation, 
+démontrant ainsi ma capacité à appliquer les connaissances théoriques dans des situations concrètes.'),
+('CarText1', 'portfolio', 'Organisation du projet "Portfolio".sur github.'),
+('CarText2', 'portfolio', 'MDL de la base de donnée du projet "Portfolio".');
+
+INSERT INTO realisation_image (image_id, realisation_id, image_url, alt_text) VALUES 
+('screenGesProj1', 'portfolio', '/images/portfolio/gestionProjet.png', 'Organisation du projet "Portfolio".sur github.'),
+('screenMDL1', 'portfolio', '/images/portfolio/databaseMDL.png', 'MDL de la base de donnée du projet "Portfolio".');
+
+INSERT INTO carousel_item (carousel_item_id, realisation_id, text_id, image_id, ressource_url) VALUES 
+('car1', 'portfolio', 'CarText1', 'screenGesProj1', '/images/portfolio/gestionProjet.png'),
+('car2', 'portfolio', 'CarText2', 'screenMDL1', '/images/portfolio/databaseMDL.png');
 
 INSERT INTO realisation (id, name, listBloc, duration, description, repositoryLink, demoLink) VALUES 
 ('nolark', 'Le site Nolark', '1.2', 'Septembre à fin Décembre 2022', 
@@ -188,10 +202,10 @@ INSERT INTO realisation_image (image_id, realisation_id, image_url, alt_text) VA
 ('screenHtml1', 'nolark', '/images/Nolark/nolark_html.png', 'Le code HTML de la page d\'acceuil.'),
 ('screenCss1', 'nolark', '/images/Nolark/nolark_css.png', 'Exemple de code CSS fait pour la page.');
 
-INSERT INTO carousel_item (carousel_item_id, realisation_id, text_id, image_id, button_id) VALUES 
-('car1', 'nolark', 'CarText1', 'screenHome1', 'viewHomeMenu'),
-('car2', 'nolark', 'CarText2', 'screenHtml1', 'viewHtmlCode'),
-('car3', 'nolark', 'CarText3', 'screenCss1', 'viewCssCode');
+INSERT INTO carousel_item (carousel_item_id, realisation_id, text_id, image_id, ressource_url) VALUES 
+('car1', 'nolark', 'CarText1', 'screenHome1', '/images/Nolark/acceuil_nolark.png'),
+('car2', 'nolark', 'CarText2', 'screenHtml1', '/resources/Nolark_css.txt'),
+('car3', 'nolark', 'CarText3', 'screenCss1', '/resources/Nolark_index.txt');
 
 
 -- ('nolark', 'img', '1', 'La page d\'acceuil du site Nolark.', '/images/Nolark/acceuil_nolark.png'),

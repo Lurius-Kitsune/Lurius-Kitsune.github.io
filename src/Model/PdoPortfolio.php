@@ -104,8 +104,8 @@ class PdoPortfolio
     {
         $result = $this->connexion->prepare("SELECT realisation_image.image_url, realisation_image.alt_text, realisation_text.text_content, carousel_item.ressource_url, carousel_item.carousel_item_id
                                             FROM carousel_item 
-                                            INNER JOIN realisation_text ON realisation_text.text_id = carousel_item.text_id
-                                            INNER JOIN realisation_image ON realisation_image.image_id = carousel_item.image_id
+                                            INNER JOIN realisation_text ON realisation_text.text_id = carousel_item.text_id and realisation_text.realisation_id = carousel_item.realisation_id
+                                            INNER JOIN realisation_image ON realisation_image.image_id = carousel_item.image_id and realisation_image.realisation_id = carousel_item.realisation_id
                                             WHERE carousel_item.realisation_id = :projectId");
         $result->bindParam(':projectId', $projectId, PDO::PARAM_STR);
         $result->execute();
