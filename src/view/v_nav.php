@@ -38,7 +38,7 @@ $activePage = $_GET['action'] ?? '/';
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu " role="menu">
-                        <li class="dropdown-header dropdown-item-text" role="presentation">
+                        <li class="dropdown-header dropdown-item" role="presentation">
                             Documentations contexte</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Présentation</a>
@@ -53,7 +53,7 @@ $activePage = $_GET['action'] ?? '/';
                             <a class="dropdown-item" role="menuitem" href="#">Annexes</a>
                         </li>
                         <li role="presentation" class="dropdown-divider"></li>
-                        <li role="presentation" class="dropdown-header dropdown-item-text">
+                        <li role="presentation" class="dropdown-header dropdown-item">
                             Fiches d'examen</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Situation professionnelle n°1</a>
@@ -62,7 +62,7 @@ $activePage = $_GET['action'] ?? '/';
                             <a class="dropdown-item" role="menuitem" href="#">Situation professionnelle n°2</a>
                         </li>
                         <li role="presentation" class="dropdown-divider"></li>
-                        <li role="presentation" class="dropdown-header dropdown-item-text">
+                        <li role="presentation" class="dropdown-header dropdown-item">
                             Démonstrations</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Démo SP n°1</a>
@@ -71,7 +71,7 @@ $activePage = $_GET['action'] ?? '/';
                             <a class="dropdown-item" role="menuitem" href="#">Démo SP n°2</a>
                         </li>
                         <li role="presentation" class="dropdown-divider"></li>
-                        <li role="presentation" class="dropdown-header dropdown-item-text">
+                        <li role="presentation" class="dropdown-header dropdown-item">
                             Codes sources</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="https://github.com/Lurius-Kitsune/AP1-GSB" target="_blank">Sources SP n°1</a>
@@ -87,7 +87,7 @@ $activePage = $_GET['action'] ?? '/';
                         <span class="fa fa-list-alt"></span> Réalisations <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li role="presentation" class="dropdown-header dropdown-item-text">
+                        <li role="presentation" class="dropdown-header dropdown-item">
                             En autonomie</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Bot Discord Eski</a>
@@ -98,7 +98,8 @@ $activePage = $_GET['action'] ?? '/';
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="#">Configuration de modèle 3D</a>
                         </li>
-                        <li role="presentation" class="dropdown-header dropdown-item-text">
+                        <li role="presentation" class="dropdown-divider"></li>
+                        <li role="presentation" class="dropdown-header dropdown-item">
                             Pendant mes études</li>
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="/?action=realisationController&projectId=nolark">Nolark</a>
@@ -106,6 +107,7 @@ $activePage = $_GET['action'] ?? '/';
                         <li role="presentation">
                             <a class="dropdown-item" role="menuitem" href="/?action=realisationController&projectId=portfolio">Mon portfolio</a>
                         </li>
+                        <li role="presentation" class="dropdown-divider"></li>
                         <li role="presentation" class="dropdown-header dropdown-item">
                             En entreprise</li>
                         <li role="presentation">
