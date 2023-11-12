@@ -17,18 +17,18 @@ $headerContent = '<link href="/css/realisations.css" rel="stylesheet">';
 
 $projectInfo = $pdo->getProjectInfo($projectId);
 
-if($projectInfo === false) {
+if ($projectInfo === false) {
     header("HTTP/1.0 404 NotFound");
     exit();
 }
 
 $content = Pager::extractFile(VIEW . '/realisation/v_realisation.php', null, [
     'projectTitle' => $projectInfo['name'],
-    'projectBlocs' => explode( ';', $projectInfo['listBloc'] ),
+    'projectBlocs' => explode(';', $projectInfo['listBloc']),
     'projectDuration' => $projectInfo['duration'],
     'projectDescription' => $projectInfo['description'],
-    'projectCardList' =>  [],
-    'projectSubDescription' => 'bob',
+    'projectItemList' =>  $pdo->getCarousselProjectInfo($projectId),
+    'projectSubDescription' => $pdo->getProjectSubDescription($projectId) ?? '',
     'projectGithub' => $projectInfo['repositoryLink'],
     'projectDemo' => $projectInfo['demoLink']
 ]);
